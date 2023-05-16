@@ -1,7 +1,10 @@
-export const ProtectedCarIndex = () => {
-    return (
-      <nav>
-        <span>GTAI ProtectedCarIndex</span>
-      </nav>
-    )
-  }
+
+const ProtectedCarIndex = () => {
+  return (
+    <nav>
+      <span>GTAI Car Protected Index</span>
+    </nav>
+  )
+}
+
+export default ProtectedCarIndex
