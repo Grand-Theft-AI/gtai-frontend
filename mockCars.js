@@ -68,8 +68,8 @@ export default cars = [
     image: 'https://www.vinylwrap.org/wp-content/uploads/2018/10/13188034_1130771763653079_78195089_n.jpg',
     price: 62000,
     description: 'Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.',
-    street: '69 Phuck Street',
-    city: 'Bangville',
+    street: '69 Freaky Street',
+    city: 'Bamville',
     state: 'NY',
     zip: '11221',
     user_id: 2
