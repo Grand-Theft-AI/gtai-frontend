@@ -1,6 +1,5 @@
-// import { useState } from 'react'
 import { Routes, Route } from "react-router-dom"
-import { Navbar } from "./components/Navbar"
+import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import Home from "./pages/Home"
 import CarNew from "./pages/CarNew"
@@ -13,7 +12,6 @@ import AboutUs from "./pages/AboutUs"
 import CarIndex from "./pages/CarIndex"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
-
 
 const App = () => {
 
