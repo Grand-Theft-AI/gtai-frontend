@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import { Navbar } from '../components/Navbar'
+import Navbar from '../components/Navbar'
 import { BrowserRouter } from 'react-router-dom'
 
 describe('<Navbar />', () => {
@@ -10,7 +10,10 @@ describe('<Navbar />', () => {
       </BrowserRouter>
     )
 
-    const brand = screen.getByText(/Global Technology Asset Investment/i)
-    expect(brand).toBeInTheDocument()
+    const homeLink = screen.getByText(/Home/i)
+    expect(homeLink).toBeInTheDocument()
+
+    const listingLink = screen.getByText(/View Listings/i)
+    expect(listingLink).toBeInTheDocument()
   })
 })
