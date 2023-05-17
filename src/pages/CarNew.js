@@ -2,10 +2,12 @@
 
 
 
+
+
 const CarNew = () => {
     return (
       <nav className="nav">
-        <span>GTAI Create A New Car</span>
+        <pageheader>Add A Car</pageheader>
       </nav>
     )
   }

@@ -2,10 +2,12 @@
 
 
 
+
+
 const Login = () => {
   return (
     <nav className="nav">
-      <span>GTAI Login</span>
+      <pageheader>Login</pageheader>
     </nav>
   )
 }

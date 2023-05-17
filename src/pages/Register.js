@@ -3,10 +3,12 @@
 
 
 
+
+
 const Register = () => {
   return (
     <nav className="nav">
-      <span>GTAI Register</span>
+      <pageheader>Register Now!</pageheader>
     </nav>
   )
 }

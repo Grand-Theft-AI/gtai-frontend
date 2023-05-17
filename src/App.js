@@ -12,7 +12,6 @@ import AboutUs from "./pages/AboutUs"
 import CarIndex from "./pages/CarIndex"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
-
 import './App.css'
 
 

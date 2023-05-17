@@ -2,10 +2,12 @@
 
 
 
+
+
 const CarShow = () => {
     return (
       <nav className="nav">
-        <span>GTAI Car Show</span>
+        <pageheader>Your Car</pageheader>
       </nav>
     )
   }
