@@ -69,15 +69,15 @@ const appFeatures = [
 const Features = () => {
   return (
     <Container>
-      <h2 className='font-header font-bold text-2xl text-center'>Features</h2>
+      <h2 className='font-header text-2xl text-center'>Features</h2>
       <div className='grid grid-cols-1 lg:grid-cols-3'>
         {appFeatures.map((feature) => (
           <div className='flex flex-col gap-2 p-2' key={feature.heading}>
             <div className='flex gap-2'>
               {feature.icon}
-              <h3 className='font-header font-bold'>{feature.heading}</h3>
+              <h3 className='font-header'>{feature.heading}</h3>
             </div>
-            <p>{feature.description}</p>
+            <p className='font-sans'>{feature.description}</p>
           </div>
         ))}
       </div>

@@ -1,22 +1,21 @@
-import { NavLink } from 'react-router-dom'
-import Container from './Container'
-
-export const Navbar = () => {
+import { Link } from "react-router-dom";
+import GTAI from "../assets/GTAI.png"
+const Navbar = () => {
   return (
-    <nav className='border-b border-stone-300 py-2'>
-      <Container className='flex items-center justify-between'>
-        <NavLink to='/' className='font-bold'>
-          <span className='hidden sm:block'>Global Technology Asset Investment</span>
-          <span className='sm:hidden'>GTAI</span>
-        </NavLink>
-
-        <div className='flex gap-4'>
-          <NavLink to='/'>Home</NavLink>
-          <NavLink to='/login'>Login</NavLink>
-          <NavLink to='/register'>Register</NavLink>
-          <NavLink to='/carindex'>View Listings</NavLink>
-        </div>
-      </Container>
+    <nav className="navbar">
+      <Link to="/" className="nav-link">
+        <h3 className="nav-link-text">HOME</h3>
+      </Link>
+      <div className="logo-container">
+      <Link to="/" className="logo-link">
+        <img src={GTAI} alt="Logo" className="logo-icon" />
+        </Link>
+      </div>
+      <Link to="/carindex" className="nav-link">
+        <h3 className="nav-link-text">VIEW LISTINGS</h3>
+      </Link>
     </nav>
-  )
-}
+  );
+};
+
+export default Navbar;

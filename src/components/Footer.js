@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
-    <nav>
-      <span>GTAI Footer</span>
-    </nav>
+    <footer className="bg-black text-white text-center font-header">
+      <span>DISCLAIMER: THIS IS A NOVELTY APPLICATION & IS NOT USED FOR STEALING CARS.</span>
+    </footer>
   )
 }
 

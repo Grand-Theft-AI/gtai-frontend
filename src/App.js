@@ -1,22 +1,25 @@
-import { Routes, Route } from 'react-router-dom'
-import { Navbar } from './components/Navbar'
-import Footer from './components/Footer'
-import Home from './pages/Home'
-import CarNew from './pages/CarNew'
-import CarShow from './pages/CarShow'
-import Dashboard from './pages/Dashboard'
-import MyCars from './pages/MyCars'
-import NotFound from './pages/NotFound'
-import ProtectedCarIndex from './pages/ProtectedCarIndex'
-import AboutUs from './pages/AboutUs'
-import CarIndex from './pages/CarIndex'
-import Login from './pages/Login'
-import Register from './pages/Register'
+import { Routes, Route } from "react-router-dom"
+import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
+import Home from "./pages/Home"
+import CarNew from "./pages/CarNew"
+import CarShow from "./pages/CarShow"
+import Dashboard from "./pages/Dashboard"
+import MyCars from "./pages/MyCars"
+import NotFound from "./pages/NotFound"
+import ProtectedCarIndex from "./pages/ProtectedCarIndex"
+import AboutUs from "./pages/AboutUs"
+import CarIndex from "./pages/CarIndex"
+import Login from "./pages/Login"
+import Register from "./pages/Register"
+
+import './App.css'
 
 const App = () => {
   return (
     <>
       <Navbar />
+      <main>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/carnew' element={<CarNew />} />
@@ -30,6 +33,7 @@ const App = () => {
         <Route path='/register' element={<Register />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
+      </main>
       <Footer />
     </>
   )
