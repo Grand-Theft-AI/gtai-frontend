@@ -4,7 +4,7 @@
 
 const NotFound = () => {
     return (
-      <nav>
+      <nav className="nav">
         <span>GTAI Not Found</span>
       </nav>
     )

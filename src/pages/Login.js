@@ -4,7 +4,7 @@
 
 const Login = () => {
   return (
-    <nav>
+    <nav className="nav">
       <span>GTAI Login</span>
     </nav>
   )

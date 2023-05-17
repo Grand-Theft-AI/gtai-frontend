@@ -4,7 +4,7 @@
 
 const MyCars = () => {
     return (
-      <nav>
+      <nav className="nav">
         <span>GTAI User's Cars</span>
       </nav>
     )

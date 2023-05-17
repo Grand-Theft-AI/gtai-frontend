@@ -1,7 +1,7 @@
 
 const ProtectedCarIndex = () => {
   return (
-    <nav>
+    <nav className="nav">
       <span>GTAI Car Protected Index</span>
     </nav>
   )

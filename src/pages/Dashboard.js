@@ -1,6 +1,9 @@
+
+
+
 const UserProtectedDashboard = () => {
     return (
-      <nav>
+      <nav className="nav">
         <span>GTAI User Protected Dashboard</span>
       </nav>
     )

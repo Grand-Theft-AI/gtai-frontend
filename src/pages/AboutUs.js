@@ -1,6 +1,6 @@
 const AboutUs = () => {
   return (
-    <nav>
+    <nav className="nav">
       <span>GTAI About Us</span>
     </nav>
   )

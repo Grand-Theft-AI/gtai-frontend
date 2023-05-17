@@ -5,7 +5,7 @@
 
 const Register = () => {
   return (
-    <nav>
+    <nav className="nav">
       <span>GTAI Register</span>
     </nav>
   )

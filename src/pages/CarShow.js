@@ -4,7 +4,7 @@
 
 const CarShow = () => {
     return (
-      <nav>
+      <nav className="nav">
         <span>GTAI Car Show</span>
       </nav>
     )

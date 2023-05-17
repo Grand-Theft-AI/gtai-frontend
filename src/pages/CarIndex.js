@@ -4,7 +4,7 @@
 
 const CarIndex = () => {
     return (
-      <nav>
+      <nav className="nav">
         <span>GTAI Car Index</span>
       </nav>
     )

@@ -1,6 +1,5 @@
-// import { useState } from 'react'
 import { Routes, Route } from "react-router-dom"
-import { Navbar } from "./components/Navbar"
+import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import Home from "./pages/Home"
 import CarNew from "./pages/CarNew"
@@ -14,12 +13,15 @@ import CarIndex from "./pages/CarIndex"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
 
+import './App.css'
+
 
 const App = () => {
 
   return (
     <>
       <Navbar />
+      <main>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/carnew" element={<CarNew />} />
@@ -33,6 +35,7 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      </main>
       <Footer />
     </>
   )

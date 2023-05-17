@@ -4,7 +4,7 @@
 
 const CarNew = () => {
     return (
-      <nav>
+      <nav className="nav">
         <span>GTAI Create A New Car</span>
       </nav>
     )
