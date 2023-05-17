@@ -1,9 +1,9 @@
 const CarNew = () => {
-    return (
-      <>
-        <span>GTAI Create A New Car</span>
-      </>
-    )
-  }
-  
-  export default CarNew
+  return (
+    <>
+      <pageheader>Add A Car</pageheader>
+    </>
+  )
+}
+
+export default CarNew

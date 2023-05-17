@@ -45,7 +45,11 @@ const Login = () => {
             Login
           </button>
         </form>
-          <span>Don't have an account? <NavLink to='/register' className='text-blue-400'>Register</NavLink>
+        <span>
+          Don't have an account?{' '}
+          <NavLink to='/register' className='text-blue-400'>
+            Register
+          </NavLink>
         </span>
       </div>
     </div>

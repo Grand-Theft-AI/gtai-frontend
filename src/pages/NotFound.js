@@ -1,7 +1,9 @@
+import wrongRoute from "../assets/wrongRoute.png"
+
 const NotFound = () => {
     return (
       <>
-        <span>GTAI Not Found</span>
+        <img src={wrongRoute} alt="Page Not Found" className="not-found-image" />
       </>
     )
   }

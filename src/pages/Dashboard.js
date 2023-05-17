@@ -1,7 +1,7 @@
 const Dashboard = () => {
     return (
       <>
-        <span>GTAI User Protected Dashboard</span>
+        <pageheader>User Dashboard</pageheader>
       </>
     )
   }

@@ -1,7 +1,7 @@
 const AboutUs = () => {
   return (
     <>
-      <span>GTAI About Us</span>
+      <pageheader>About Us</pageheader>
     </>
   )
 }

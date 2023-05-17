@@ -1,9 +1,9 @@
 const CarShow = () => {
-    return (
-      <>
-        <span>GTAI Car Show</span>
-      </>
-    )
-  }
-  
-  export default CarShow
+  return (
+    <>
+      <pageheader>Your Car</pageheader>
+    </>
+  )
+}
+
+export default CarShow
