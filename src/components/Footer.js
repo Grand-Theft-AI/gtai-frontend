@@ -1,7 +1,3 @@
-
-
-
-
 const Footer = () => {
   return (
     <footer className="bg-black text-white text-center">

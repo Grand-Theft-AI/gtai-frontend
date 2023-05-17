@@ -1,12 +1,9 @@
-
-
-
-const UserProtectedDashboard = () => {
+const Dashboard = () => {
     return (
-      <nav className="nav">
+      <>
         <span>GTAI User Protected Dashboard</span>
-      </nav>
+      </>
     )
   }
   
-  export default UserProtectedDashboard
+  export default Dashboard
