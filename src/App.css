@@ -6,7 +6,6 @@ footer {
     color: #fff;
     text-align: center;
     padding: 5px;
-    font-family: "Kollektif";
     font-size: 0.7rem;
   }
   
@@ -15,7 +14,6 @@ footer {
   }
 
   h3 {
-    font-family: "Agrandir";
     color: white;
     font-size: 1rem !important;
   }

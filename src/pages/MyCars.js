@@ -1,15 +1,9 @@
-
-
-
-
-
-
 const MyCars = () => {
-    return (
-      <nav className="nav">
-        <pageheader>My Cars</pageheader>
-      </nav>
-    )
-  }
-  
-  export default MyCars
+  return (
+    <>
+      <pageheader>My Cars</pageheader>
+    </>
+  )
+}
+
+export default MyCars

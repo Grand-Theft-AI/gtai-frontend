@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Agrandir-Regular';
+  src: local('Agrandir-Regular'), url(./fonts/Agrandir-Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Kollektif-Bold';
+  src: local('Kollektif-Bold'), url(./fonts/Kollektif-Bold.ttf) format('truetype');
+}
+

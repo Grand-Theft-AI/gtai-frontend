@@ -1,15 +1,9 @@
-
-
-
-
-
-
 const CarShow = () => {
-    return (
-      <nav className="nav">
-        <pageheader>Your Car</pageheader>
-      </nav>
-    )
-  }
-  
-  export default CarShow
+  return (
+    <>
+      <pageheader>Your Car</pageheader>
+    </>
+  )
+}
+
+export default CarShow

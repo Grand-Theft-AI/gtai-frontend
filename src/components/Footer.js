@@ -1,10 +1,6 @@
-
-
-
-
 const Footer = () => {
   return (
-    <footer className="bg-black text-white text-center">
+    <footer className="bg-black text-white text-center font-header">
       <span>DISCLAIMER: THIS IS A NOVELTY APPLICATION & IS NOT USED FOR STEALING CARS.</span>
     </footer>
   )

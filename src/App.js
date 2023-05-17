@@ -14,25 +14,23 @@ import Login from "./pages/Login"
 import Register from "./pages/Register"
 import './App.css'
 
-
 const App = () => {
-
   return (
     <>
       <Navbar />
       <main>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/carnew" element={<CarNew />} />
-        <Route path="/carshow" element={<CarShow />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/mycars" element={<MyCars />} />
-        <Route path="/protectedcarindex" element={<ProtectedCarIndex />} />
-        <Route path="/aboutus" element={<AboutUs />} />
-        <Route path="/carindex" element={<CarIndex />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/carnew' element={<CarNew />} />
+        <Route path='/carshow' element={<CarShow />} />
+        <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/mycars' element={<MyCars />} />
+        <Route path='/protectedcarindex' element={<ProtectedCarIndex />} />
+        <Route path='/aboutus' element={<AboutUs />} />
+        <Route path='/carindex' element={<CarIndex />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
       </main>
       <Footer />
