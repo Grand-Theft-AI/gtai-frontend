@@ -1,4 +1,4 @@
-const UserProtectedDashboard = () => {
+const Dashboard = () => {
     return (
       <>
         <pageheader>User Dashboard</pageheader>

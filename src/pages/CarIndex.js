@@ -7,7 +7,7 @@ const CarIndex = () => {
     <>
       <div className='card-container'>
         <div className='card-background'>
-          <pageheader>VIEW CARS</pageheader>
+          <h1 className='font-header'>VIEW CARS</h1>
           <br />
 
           <Card className='custom-card'>
