@@ -1,5 +1,9 @@
   body {
       background-image: url("./assets/Background2.png");
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      background-repeat: no-repeat;
   }
 
   h3 {
