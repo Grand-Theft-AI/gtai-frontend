@@ -1,17 +1,16 @@
 import { Card, CardBody, CardTitle, CardText, CardImg } from 'reactstrap'
 
 
-
-
 const AboutUs = () => {
   return (
     <>
-      <div className='card-container'>
-        <div className='card-background'>
-          <h1 className='font-header'>About The Team</h1>
+    <h1 className='font-header'>About The Team</h1>
           <br />
-
-          <Card className='custom-card'>
+      <div className='card-container' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div className='card-background'>
+        <a href='https://www.linkedin.com/in/nikkidunlap/' target='_blank' rel='noopener noreferrer'>
+          <Card className='custom-card2'>
+            
             <CardBody>
               <CardTitle tag='h5'>Nikki Dunlap</CardTitle>
               <CardText tag='h4'>Design Lead</CardText>
@@ -31,7 +30,9 @@ const AboutUs = () => {
               width='100%'
             />
           </Card>
-          <Card className='custom-card'>
+          </a>
+          <a href='https://www.linkedin.com/in/raymondkneipp/' target='_blank' rel='noopener noreferrer'>
+          <Card className='custom-card2'>
             <CardBody>
               <CardTitle tag='h5'>Ray Kneipp</CardTitle>
               <CardText tag='h4'>Tech Lead</CardText>
@@ -49,7 +50,9 @@ const AboutUs = () => {
               width='100%'
             />
           </Card>
-          <Card className='custom-card'>
+          </a>
+          <a href='https://www.linkedin.com/in/greg-ostertag/' target='_blank' rel='noopener noreferrer'>
+          <Card className='custom-card2'>
             <CardBody>
               <CardTitle tag='h5'>Greg Ostertag</CardTitle>
               <CardText tag='h4'>Project Manager</CardText>
@@ -67,7 +70,9 @@ const AboutUs = () => {
               width='100%'
             />
           </Card>
-          <Card className='custom-card'>
+          </a>
+          <a href='https://www.linkedin.com/in/apolonioortiz/' target='_blank' rel='noopener noreferrer'>
+          <Card className='custom-card2'>
             <CardBody>
               <CardTitle tag='h5'>Apolonio Ortiz</CardTitle>
               <CardText tag='h4'>Product Manager</CardText>
@@ -85,6 +90,7 @@ const AboutUs = () => {
               width='100%'
             />
           </Card>
+          </a>
         </div>
       </div>
     </>
