@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import sketchy from '../assets/sketchy.png'
 
 const Login = () => {
   const [email, setEmail] = useState('')
@@ -12,7 +13,8 @@ const Login = () => {
 
   return (
     <div className='grid lg:grid-cols-2 min-h-screen'>
-      <div className='bg-blue-900 hidden lg:block shadow-xl shadow-blue-900'></div>
+      <div className='bg-black hidden lg:block shadow-xl shadow-black'></div>
+      <img src={sketchy} alt='Sketchy' className="imageInSquare"/>
 
       <div className='flex flex-col items-center justify-center p-2 gap-2'>
         <h2 className='font-heading font-bold text-2xl text-center'>Login</h2>

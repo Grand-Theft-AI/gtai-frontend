@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import sell from '../assets/sell.png'
 
 const Register = () => {
   const [email, setEmail] = useState('')
@@ -12,7 +13,10 @@ const Register = () => {
 
   return (
     <div className='grid lg:grid-cols-2 min-h-screen'>
-      <div className='bg-red-900 hidden lg:block shadow-xl shadow-red-900'></div>
+      <div className='bg-black hidden lg:block shadow-xl shadow-black'></div>
+      <img src={sell} alt='Sell' className="imageInSquare"/>
+      
+      
 
       <div className='flex flex-col items-center justify-center p-2 gap-2'>
         <h2 className='font-heading font-bold text-2xl text-center'>
