@@ -1,8 +1,6 @@
 import Container from '../components/Container'
 import mockCars from '../mockCars'
 import { Link } from 'react-router-dom'
-// import { Distance } from '../components/icons/Distance'
-// import { BankNotes } from '../components/icons/BankNotes'
 import { Distance, BankNotes } from '../components/icons'
 
 const CarIndex = () => {

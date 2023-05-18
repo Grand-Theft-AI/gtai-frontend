@@ -1,4 +1,3 @@
-import AboutUs from "../pages/AboutUs"
 import { NavLink } from "react-router-dom"
 
 

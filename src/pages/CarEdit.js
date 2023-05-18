@@ -2,22 +2,26 @@ import { useState } from 'react'
 import LabeledInput from '../components/LabeledInput'
 import stateLabelValues from '../constants/stateLabelValues'
 
-const CarNew = ({addCar}) => {
-  const [make, setMake] = useState('')
-  const [model, setModel] = useState('')
-  const [year, setYear] = useState(2023)
-  const [mileage, setMileage] = useState(0)
-  const [image, setImage] = useState('')
-  const [price, setPrice] = useState(60000)
-  const [description, setDescription] = useState('')
-  const [street, setStreet] = useState('')
-  const [city, setCity] = useState('')
-  const [state, setState] = useState(stateLabelValues[0].value)
-  const [zip, setZip] = useState('')
+
+const CarEdit = ({updateCar}) => {
+  const { id } = useParams()
+  let currentCar = cars?.find((car) => car.id === +id)
+
+  const [make, setMake] = useState(currentCar.make)
+  const [model, setModel] = useState(currentCar.model)
+  const [year, setYear] = useState(currentCar.year)
+  const [mileage, setMileage] = useState(currentCar.mileage)
+  const [image, setImage] = useState(currentCar.image)
+  const [price, setPrice] = useState(currentCar.price)
+  const [description, setDescription] = useState(currentCar.description)
+  const [street, setStreet] = useState(currentCar.street)
+  const [city, setCity] = useState(currentCar.city)
+  const [state, setState] = useState(currentCar.state)
+  const [zip, setZip] = useState(currentCar.zip)
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    addCar({
+    updateCar({
       make,
       model,
       year,
@@ -34,7 +38,7 @@ const CarNew = ({addCar}) => {
 
   return (
     <>
-      <h1>Add A Car</h1>
+      <h1>Edit A Car</h1>
 
       <form className='flex flex-col gap-2' onSubmit={(e) => handleSubmit(e)}>
         <LabeledInput
@@ -105,10 +109,10 @@ const CarNew = ({addCar}) => {
           onChange={(e) => setZip(e.target.value)}
         />
 
-        <button type='submit'>Add Car</button>
+        <button type='submit'>Update Car</button>
       </form>
     </>
   )
 }
 
-export default CarNew
+export default CarEdit
