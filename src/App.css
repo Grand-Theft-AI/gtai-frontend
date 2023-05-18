@@ -61,6 +61,8 @@
     display: flex;
     justify-content: center;
     margin-top: -20px;
+    align-content: center !important;
+    margin-right: 357.5px
   }
 
   .logo-link:hover {
@@ -94,7 +96,19 @@
 
   }
 
-  .custom-card:hover {
+  .custom-card2 {
+    width: 325px;
+    height: 10px;
+    display: inline-block !important;
+    margin: 15px;
+    background-color: black !important;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease;
+
+  }
+
+  .custom-card:hover, .custom-card2:hover {
     box-shadow: 0 5px 20px rgba(255, 0, 0, 0.5);
     transform: translateY(-5px);
   }
