@@ -20,6 +20,12 @@ const Navbar = () => {
             <img src={GTAI} alt='Logo' className='logo-icon' />
           </Link>
         </div>
+        <Link to='/login' className='nav-link'>
+          <span className='nav-link-text'>LOGIN</span>
+        </Link>
+        <Link to='/register' className='nav-link'>
+          <span className='nav-link-text'>REGISTER</span>
+        </Link>
       </Container>
     </nav>
   )
