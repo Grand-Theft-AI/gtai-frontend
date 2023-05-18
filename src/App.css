@@ -85,15 +85,8 @@
   }
 
   .custom-card {
-    width: 200px;
-    height: 10px;
-    display: inline-block !important;
-    margin: 15px;
-    background-color: black !important;
-    background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     transition: box-shadow 0.3s ease;
-
   }
 
   .custom-card2 {
