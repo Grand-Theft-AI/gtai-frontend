@@ -8,7 +8,6 @@ import CarShow from './pages/CarShow'
 import Dashboard from './pages/Dashboard'
 import MyCars from './pages/MyCars'
 import NotFound from './pages/NotFound'
-import ProtectedCarIndex from './pages/ProtectedCarIndex'
 import AboutUs from './pages/AboutUs'
 import CarIndex from './pages/CarIndex'
 import Login from './pages/Login'
@@ -36,7 +35,6 @@ const App = () => {
           <Route path='/carshow/:id' element={<CarShow cars={cars} current_user={currentUser}/>} />
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/mycars' element={<MyCars />} />
-          <Route path='/protectedcarindex' element={<ProtectedCarIndex />} />
           <Route path='/aboutus' element={<AboutUs />} />
           <Route path='/carindex' element={<CarIndex />} />
           <Route path='/login' element={<Login />} />
