@@ -1,7 +1,6 @@
 import { Card, CardBody, CardTitle, CardText, CardImg } from 'reactstrap'
 import mockCars from '../mockCars'
 
-import mockCar1 from '../assets/mockCar1.jpg'
 
 const CarIndex = () => {
   return (
