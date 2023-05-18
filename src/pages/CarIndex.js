@@ -1,4 +1,5 @@
 import { Card, CardBody, CardTitle, CardText, CardImg } from 'reactstrap'
+import mockCars from '../mockCars'
 
 import mockCar1 from '../assets/mockCar1.jpg'
 
@@ -10,62 +11,32 @@ const CarIndex = () => {
           <h1 className='font-header'>VIEW CARS</h1>
           <br />
 
-          <Card className='custom-card'>
-            <CardBody>
-              <CardTitle tag='h5'>A CAR GOES HERE</CardTitle>
-              <CardText tag='h4'>Details here.</CardText>
-              <CardText>
-                <small className='smaller-card-text'>
-                  Click Now to Aquire!
-                </small>
-              </CardText>
-            </CardBody>
-            <CardImg
-              alt='Card image cap'
-              bottom
-              src={mockCar1}
-              style={{
-                height: 180,
-              }}
-              width='100%'
-            />
-          </Card>
-          <Card className='custom-card'>
-            <CardBody>
-              <CardTitle tag='h5'>A CAR GOES HERE</CardTitle>
-              <CardText tag='h4'>Details here.</CardText>
-              <CardText>
-                <small className='smaller-card-text'>Click to Aquire!</small>
-              </CardText>
-            </CardBody>
-            <CardImg
-              alt='Card image cap'
-              bottom
-              src='https://picsum.photos/900/180'
-              style={{
-                height: 180,
-              }}
-              width='100%'
-            />
-          </Card>
-          <Card className='custom-card'>
-            <CardBody>
-              <CardTitle tag='h5'>A CAR GOES HERE</CardTitle>
-              <CardText tag='h4'>Details here.</CardText>
-              <CardText>
-                <small className='smaller-card-text'>Click to Aquire!</small>
-              </CardText>
-            </CardBody>
-            <CardImg
-              alt='Card image cap'
-              bottom
-              src='https://picsum.photos/900/180'
-              style={{
-                height: 180,
-              }}
-              width='100%'
-            />
-          </Card>
+          {mockCars.map(({ id, make, model, year, mileage, image, price, zip, city, state, street, description }) => (
+            <Card className='custom-card'>
+              <CardBody>
+                <CardTitle tag='h5'>
+                  {year} {make} {model}
+                </CardTitle>
+                <CardText tag='h6'>Miles: {mileage}</CardText>
+                <CardText tag='p'>{description}</CardText>
+                <CardText>
+                  <small className='smaller-card-text'>
+                    Click Now to Aquire!
+                  </small>
+                </CardText>
+              </CardBody>
+              <CardImg
+                alt='Card image cap'
+                bottom
+                src={image}
+                className='object-cover object-center'
+                style={{
+                  height: 180,
+                }}
+                width='100%'
+              />
+            </Card>
+          ))}
         </div>
       </div>
     </>

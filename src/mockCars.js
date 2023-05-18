@@ -1,4 +1,4 @@
-export default cars = [
+const mockCars = [
   {
     id: 1,
     make: 'Ford',
@@ -90,3 +90,5 @@ export default cars = [
     user_id: null
   },
 ]
+
+export default mockCars
