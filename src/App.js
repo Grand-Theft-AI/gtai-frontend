@@ -33,8 +33,17 @@ const App = () => {
       .catch((error) => console.error('Car read error: ', error))
   }
 
-  const updateCar = (newCar) => {
-    console.log('Update car', newCar)
+  const updateCar = (newCar, id) => {
+    fetch(`${BASE_URL}/cars/${id}`, {
+      body: JSON.stringify(newCar),
+      headers: {
+        "Conent-Type": "application/json"
+      },
+      method: "PATCH"
+    })
+    .then(response => response.json())
+    .then(() => readCars())
+    .catch(error => console.log("Updated car errors: ", error))
   }
 
   const deleteCar = (id) => {
