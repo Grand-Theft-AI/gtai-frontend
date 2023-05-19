@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import LabeledInput from '../components/LabeledInput'
 import stateLabelValues from '../constants/stateLabelValues'
+import Container from '../components/Container'
 
-const CarNew = ({addCar}) => {
+const CarNew = ({createCar}) => {
   const [make, setMake] = useState('')
   const [model, setModel] = useState('')
   const [year, setYear] = useState(2023)
@@ -17,7 +18,7 @@ const CarNew = ({addCar}) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    addCar({
+    createCar({
       make,
       model,
       year,
@@ -33,7 +34,7 @@ const CarNew = ({addCar}) => {
   }
 
   return (
-    <>
+    <Container>
       <h1>Add A Car</h1>
 
       <form className='flex flex-col gap-2' onSubmit={(e) => handleSubmit(e)}>
@@ -107,7 +108,7 @@ const CarNew = ({addCar}) => {
 
         <button type='submit'>Add Car</button>
       </form>
-    </>
+    </Container>
   )
 }
 

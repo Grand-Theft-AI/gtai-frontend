@@ -24,7 +24,7 @@ const CarShow = ({ cars, current_user }) => {
 
       {current_user && (
         <NavLink 
-          to={`/caredit/${selectedCar.id}`}
+          to={`/caredit/${id}`}
           >
             Edit Car
           </NavLink>

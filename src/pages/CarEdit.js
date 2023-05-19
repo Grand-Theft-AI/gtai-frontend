@@ -1,9 +1,10 @@
 import { useState } from 'react'
+import { useParams } from 'react-router-dom'
 import LabeledInput from '../components/LabeledInput'
 import stateLabelValues from '../constants/stateLabelValues'
+import Container from '../components/Container'
 
-
-const CarEdit = ({updateCar}) => {
+const CarEdit = ({ updateCar, deleteCar, cars }) => {
   const { id } = useParams()
   let currentCar = cars?.find((car) => car.id === +id)
 
@@ -22,6 +23,7 @@ const CarEdit = ({updateCar}) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     updateCar({
+      id,
       make,
       model,
       year,
@@ -37,7 +39,7 @@ const CarEdit = ({updateCar}) => {
   }
 
   return (
-    <>
+    <Container>
       <h1>Edit A Car</h1>
 
       <form className='flex flex-col gap-2' onSubmit={(e) => handleSubmit(e)}>
@@ -99,7 +101,9 @@ const CarEdit = ({updateCar}) => {
           onChange={(e) => setState(e.target.value)}
         >
           {stateLabelValues.map((state) => (
-            <option value={state.value} key={state.value}>{state.label}</option>
+            <option value={state.value} key={state.value}>
+              {state.label}
+            </option>
           ))}
         </select>
 
@@ -110,8 +114,13 @@ const CarEdit = ({updateCar}) => {
         />
 
         <button type='submit'>Update Car</button>
+        <button onClick={() => {
+          deleteCar(id)
+        }} type='button' className='bg-red-500'>
+          Delete Car
+        </button>
       </form>
-    </>
+    </Container>
   )
 }
 

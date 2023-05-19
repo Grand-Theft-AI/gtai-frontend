@@ -1,17 +1,16 @@
 import Container from '../components/Container'
-import mockCars from '../mockCars'
 import { Link } from 'react-router-dom'
 import { Distance, BankNotes } from '../components/icons'
 
-const CarIndex = () => {
+const CarIndex = ({ cars }) => {
   return (
     <Container className='flex flex-col'>
       <h1 className='font-header text-center'>VIEW CARS</h1>
 
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-        {mockCars.map(
+        {cars.map(
           ({ id, make, model, year, mileage, image, price, description }) => (
-            <Link to={`/carshow/${id}`} className='no-underline'>
+            <Link to={`/carshow/${id}`} className='no-underline' key={id}>
               <div className='custom-card text-white bg-black rounded-md overflow-hidden custom-card'>
                 <div className='p-3'>
                   <h2 className='font-header text-lg'>
