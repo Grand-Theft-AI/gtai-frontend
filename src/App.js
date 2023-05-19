@@ -126,7 +126,7 @@ const App = () => {
 
   return (
     <>
-      <Navbar />
+      <Navbar current_user={currentUser} />
       <main>
         <Routes>
           <Route path='/' element={<Home />} />

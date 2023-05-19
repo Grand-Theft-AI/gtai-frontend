@@ -1,14 +1,20 @@
 import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import sketchy from '../assets/sketchy.png'
 
+
+
 const Login = ({ login }) => {
+  const navigate = useNavigate()
+
   const [email, setEmail] = useState('')
+  
   const [password, setPassword] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault()
     login(email, password)
+    navigate('/mycars')
   }
 
   return (
