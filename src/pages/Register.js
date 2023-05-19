@@ -1,14 +1,16 @@
 import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import sell from '../assets/sell.png'
 
 const Register = ({ register }) => {
+  const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault()
     register(email, password)
+    navigate('/mycars')
   }
 
   return (

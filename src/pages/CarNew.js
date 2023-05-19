@@ -1,9 +1,11 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import LabeledInput from '../components/LabeledInput'
 import stateLabelValues from '../constants/stateLabelValues'
 import Container from '../components/Container'
 
 const CarNew = ({createCar}) => {
+  const navigate = useNavigate()
   const [make, setMake] = useState('')
   const [model, setModel] = useState('')
   const [year, setYear] = useState(2023)
@@ -31,6 +33,7 @@ const CarNew = ({createCar}) => {
       state,
       zip,
     })
+    navigate('/carindex')
   }
 
   return (

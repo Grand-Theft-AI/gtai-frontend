@@ -1,10 +1,11 @@
 import { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import LabeledInput from '../components/LabeledInput'
 import stateLabelValues from '../constants/stateLabelValues'
 import Container from '../components/Container'
 
 const CarEdit = ({ updateCar, deleteCar, cars }) => {
+  const navigate = useNavigate()
   const { id } = useParams()
   let currentCar = cars?.find((car) => car.id === +id)
 
@@ -36,6 +37,7 @@ const CarEdit = ({ updateCar, deleteCar, cars }) => {
       state,
       zip,
     })
+    navigate('/carindex')
   }
 
   return (
