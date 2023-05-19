@@ -2,7 +2,7 @@ import { useState } from 'react'
 import LabeledInput from '../components/LabeledInput'
 import stateLabelValues from '../constants/stateLabelValues'
 
-const CarNew = ({addCar}) => {
+const CarNew = ({createCar}) => {
   const [make, setMake] = useState('')
   const [model, setModel] = useState('')
   const [year, setYear] = useState(2023)
@@ -17,7 +17,7 @@ const CarNew = ({addCar}) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    addCar({
+    createCar({
       make,
       model,
       year,
