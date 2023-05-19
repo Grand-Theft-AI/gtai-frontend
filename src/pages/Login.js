@@ -13,8 +13,9 @@ const Login = ({ login }) => {
 
   return (
     <div className='grid lg:grid-cols-2 min-h-screen'>
-      <div className='bg-black hidden lg:block shadow-xl shadow-black'></div>
-      <img src={sketchy} alt='Sketchy' className='imageInSquare' />
+      <div className='bg-black hidden lg:block shadow-xl shadow-black'>
+        <img src={sketchy} alt='Sketchy' className='w-full h-auto' />
+      </div>
 
       <div className='flex flex-col items-center justify-center p-2 gap-2'>
         <h2 className='font-heading font-bold text-2xl text-center'>Login</h2>
