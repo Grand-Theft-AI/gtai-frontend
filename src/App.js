@@ -46,7 +46,7 @@ const App = () => {
     fetch(`${BASE_URL}/cars/${id}`, {
       body: JSON.stringify(newCar),
       headers: {
-        "Conent-Type": "application/json"
+        "Content-Type": "application/json"
       },
       method: "PATCH"
     })
@@ -56,7 +56,7 @@ const App = () => {
   }
 
   const deleteCar = (id) => {
-    fetch(`http://localhost:3000/cars/${id}`, {
+    fetch(`${BASE_URL}/cars/${id}`, {
       headers: {
         "Content-Type": "application/json"
       },
@@ -64,7 +64,7 @@ const App = () => {
     })
       .then(response => response.json())
       .then(() => readCars())
-      .catch(error => console.log("Car read error", error))
+      .catch(error => console.log("Car delete error", error, id))
   }
 
   const register = (email, passowrd) => {
