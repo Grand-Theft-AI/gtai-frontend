@@ -22,8 +22,17 @@ const App = () => {
 
   const [cars, setCars] = useState(mockCars)
 
-  const createCar = (car) => {
-    console.log(car)
+  const createCar = (newCar) => {
+    fetch(`${BASE_URL}/cars`, {
+      body: JSON.stringify(newCar),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+    })
+      .then((res) => res.json())
+      .then(() => readCars())
+      .catch((error) => console.error('Car create error: ', error))
   }
 
   const readCars = () => {
@@ -33,8 +42,17 @@ const App = () => {
       .catch((error) => console.error('Car read error: ', error))
   }
 
-  const updateCar = (newCar) => {
-    console.log('Update car', newCar)
+  const updateCar = (newCar, id) => {
+    fetch(`${BASE_URL}/cars/${id}`, {
+      body: JSON.stringify(newCar),
+      headers: {
+        "Conent-Type": "application/json"
+      },
+      method: "PATCH"
+    })
+    .then(response => response.json())
+    .then(() => readCars())
+    .catch(error => console.log("Updated car errors: ", error))
   }
 
   const deleteCar = (id) => {
@@ -74,9 +92,19 @@ const App = () => {
           />
           <Route
             path='/caredit/:id'
-            element={<CarEdit cars={cars} updateCar={updateCar} deleteCar={deleteCar} current_user={currentUser} />}
+            element={
+              <CarEdit
+                cars={cars}
+                updateCar={updateCar}
+                deleteCar={deleteCar}
+                current_user={currentUser}
+              />
+            }
           />
-          <Route path='/mycars' element={<MyCars cars={cars} current_user={currentUser} />} />
+          <Route
+            path='/mycars'
+            element={<MyCars cars={cars} current_user={currentUser} />}
+          />
           <Route path='/aboutus' element={<AboutUs />} />
           <Route path='/carindex' element={<CarIndex cars={cars} />} />
           <Route path='/login' element={<Login login={login} />} />
