@@ -114,7 +114,9 @@ const CarEdit = ({ updateCar, deleteCar, cars }) => {
         />
 
         <button type='submit'>Update Car</button>
-        <button onClick={() => deleteCar(id)} type='button' className='bg-red-500'>
+        <button onClick={() => {
+          deleteCar(id)
+        }} type='button' className='bg-red-500'>
           Delete Car
         </button>
       </form>

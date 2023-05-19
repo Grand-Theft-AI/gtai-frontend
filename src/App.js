@@ -42,8 +42,8 @@ const App = () => {
       .catch((error) => console.error('Car read error: ', error))
   }
 
-  const updateCar = (newCar, id) => {
-    fetch(`${BASE_URL}/cars/${id}`, {
+  const updateCar = (newCar) => {
+    fetch(`${BASE_URL}/cars/${newCar.id}`, {
       body: JSON.stringify(newCar),
       headers: {
         'Content-Type': 'application/json',
@@ -81,7 +81,7 @@ const App = () => {
       method: 'POST',
     })
       .then((res) => {
-        localStorage.setItem('token', response.headers.get('Authorization'))
+        localStorage.setItem('token', res.headers.get('Authorization'))
         return res.json()
       })
       .then((data) => {
@@ -107,10 +107,11 @@ const App = () => {
       method: 'POST',
     })
       .then((res) => {
-        localStorage.setItem('token', response.headers.get('Authorization'))
+        localStorage.setItem('token', res.headers.get('Authorization'))
         return res.json()
       })
       .then((data) => {
+        console.log(data)
         if (data?.error) {
           console.error(data.error)
         } else {
