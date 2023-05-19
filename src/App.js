@@ -38,7 +38,15 @@ const App = () => {
   }
 
   const deleteCar = (id) => {
-    console.log('Delete car', id)
+    fetch(`http://localhost:3000/cars/${id}`, {
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "DELETE"
+    })
+      .then(response => response.json())
+      .then(() => readCars())
+      .catch(error => console.log("Car read error", error))
   }
 
   const register = (email, passowrd) => {
