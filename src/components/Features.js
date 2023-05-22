@@ -73,9 +73,9 @@ const Features = () => {
       <div className='grid grid-cols-1 lg:grid-cols-3'>
         {appFeatures.map((feature) => (
           <div className='flex flex-col gap-2 p-2 text-center' key={feature.heading}>
-            <div className='flex gap-2'>
+            <div className='flex gap-2 items-center flex-col'>
               {feature.icon}
-              <h3 className='font-header'>{feature.heading}</h3>
+              <h3 className='font-koll'>{feature.heading}</h3>
             </div>
             <p className='font-sans'>{feature.description}</p>
           </div>
