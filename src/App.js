@@ -134,7 +134,7 @@ const App = () => {
     .then(payload => {
     localStorage.removeItem("token")  // remove the token
     navigate('/')
-    setCurrentUser(null)
+    setCurrentUser(payload)
   })
   .catch(error => console.log("log out errors: ", error))
   }
