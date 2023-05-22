@@ -4,6 +4,7 @@ import LabeledInput from '../components/LabeledInput'
 import stateLabelValues from '../constants/stateLabelValues'
 import Container from '../components/Container'
 import Button from '../components/Button'
+import Select from '../components/Select'
 
 const CarEdit = ({ updateCar, deleteCar, cars }) => {
   const navigate = useNavigate()
@@ -45,23 +46,25 @@ const CarEdit = ({ updateCar, deleteCar, cars }) => {
     <Container>
       <h1 className='font-header text-center'>Edit A Car</h1>
 
-      <form className='flex flex-col gap-2' onSubmit={(e) => handleSubmit(e)}>
-        <LabeledInput
-          label='Make'
-          value={make}
-          onChange={(e) => setMake(e.target.value)}
-        />
-        <LabeledInput
-          label='Model'
-          value={model}
-          onChange={(e) => setModel(e.target.value)}
-        />
-        <LabeledInput
-          label='Year'
-          type='number'
-          value={year}
-          onChange={(e) => setYear(e.target.value)}
-        />
+      <form className='flex flex-col gap-2 max-w-screen-sm m-auto backdrop-blur bg-black/50 rounded-md p-4' onSubmit={(e) => handleSubmit(e)}>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
+          <LabeledInput
+            label='Make'
+            value={make}
+            onChange={(e) => setMake(e.target.value)}
+          />
+          <LabeledInput
+            label='Model'
+            value={model}
+            onChange={(e) => setModel(e.target.value)}
+          />
+          <LabeledInput
+            label='Year'
+            type='number'
+            value={year}
+            onChange={(e) => setYear(e.target.value)}
+          />
+        </div>
         <LabeledInput
           label='Mileage'
           type='number'
@@ -84,37 +87,26 @@ const CarEdit = ({ updateCar, deleteCar, cars }) => {
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
-        <LabeledInput
-          label='Street'
-          value={street}
-          onChange={(e) => setStreet(e.target.value)}
-        />
-        <LabeledInput
-          label='City'
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-        />
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-2'>
+          <LabeledInput
+            label='Street'
+            value={street}
+            onChange={(e) => setStreet(e.target.value)}
+          />
+          <LabeledInput
+            label='City'
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+          />
 
-        <label htmlFor='state'>State</label>
+          <Select label='State' options={stateLabelValues} />
 
-        <select
-          name='state'
-          id='state'
-          value={state}
-          onChange={(e) => setState(e.target.value)}
-        >
-          {stateLabelValues.map((state) => (
-            <option value={state.value} key={state.value}>
-              {state.label}
-            </option>
-          ))}
-        </select>
-
-        <LabeledInput
-          label='Zip'
-          value={zip}
-          onChange={(e) => setZip(e.target.value)}
-        />
+          <LabeledInput
+            label='Zip'
+            value={zip}
+            onChange={(e) => setZip(e.target.value)}
+          />
+        </div>
 
         <Button type='submit'>Update Car</Button>
         <Button
