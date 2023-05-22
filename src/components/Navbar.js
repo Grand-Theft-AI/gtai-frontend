@@ -5,7 +5,10 @@ import GTAI from '../assets/GTAI.png'
 const Navbar = ({ current_user }) => {
   return (
     <nav className='bg-black/50 backdrop-blur'>
-      <Container className='flex items-center'>
+      <Container className='flex flex-col md:flex-row md:items-center'>
+        <Link to='/' className='flex-1'>
+          <img src={GTAI} alt='Logo' className='w-20 h-20 object-contain' />
+        </Link>
         <Link to='/' className='nav-link'>
           <span className='nav-link-text'>Home</span>
         </Link>
@@ -18,10 +21,7 @@ const Navbar = ({ current_user }) => {
           </Link>
         )}
         <Link to='/carindex' className='nav-link'>
-          <span className='nav-link-text'>View Listings</span>
-        </Link>
-        <Link to='/' className='flex-1 flex items-center justify-center'>
-          <img src={GTAI} alt='Logo' className='w-20 h-20 object-contain' />
+          <span className='nav-link-text'>Listings</span>
         </Link>
         {!current_user && (
           <>
