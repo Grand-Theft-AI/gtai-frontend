@@ -11,7 +11,7 @@ const CarIndex = ({ cars }) => {
         {cars.map(
           ({ id, make, model, year, mileage, image, price, description }) => (
             <Link to={`/carshow/${id}`} className='no-underline' key={id}>
-              <div className='custom-card text-white bg-black rounded-md overflow-hidden custom-card'>
+              <div className='custom-card text-white bg-black/50 backdrop-blur rounded-md overflow-hidden custom-card'>
                 <div className='p-3'>
                   <h2 className='text-lg'>
                     {year} {make} {model}

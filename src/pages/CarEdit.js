@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import LabeledInput from '../components/LabeledInput'
 import stateLabelValues from '../constants/stateLabelValues'
 import Container from '../components/Container'
+import Button from '../components/Button'
 
 const CarEdit = ({ updateCar, deleteCar, cars }) => {
   const navigate = useNavigate()
@@ -42,7 +43,7 @@ const CarEdit = ({ updateCar, deleteCar, cars }) => {
 
   return (
     <Container>
-      <h1>Edit A Car</h1>
+      <h1 className='font-header text-center'>Edit A Car</h1>
 
       <form className='flex flex-col gap-2' onSubmit={(e) => handleSubmit(e)}>
         <LabeledInput
@@ -115,12 +116,15 @@ const CarEdit = ({ updateCar, deleteCar, cars }) => {
           onChange={(e) => setZip(e.target.value)}
         />
 
-        <button type='submit'>Update Car</button>
-        <button onClick={() => {
-          deleteCar(id)
-        }} type='button' className='bg-red-500'>
+        <Button type='submit'>Update Car</Button>
+        <Button
+          onClick={() => {
+            deleteCar(id)
+          }}
+          type='button'
+        >
           Delete Car
-        </button>
+        </Button>
       </form>
     </Container>
   )
