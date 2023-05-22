@@ -1,11 +1,19 @@
+import Container from '../components/Container'
 import CountUp from 'react-countup';
 import { InView } from 'react-intersection-observer';
+import { Link } from 'react-router-dom'
+import { Distance, BankNotes } from '../components/icons'
 
 
 
-const MyCars = () => {
+const MyCars = ({ cars, current_user }) => {
+
+  const myCars = cars?.filter(
+    (car) => current_user?.id === car.user_id
+  )
+
   return (
-    <>
+    <Container className='flex flex-col'>
       
       <div><h1 className='font-header'>MY CARS</h1></div>
 
@@ -32,7 +40,40 @@ const MyCars = () => {
           Cars Stolen
         </div>
       </div>
-    </>
+
+      {myCars.map(
+           
+          ({ id, make, model, year, mileage, image, price, description }) => (
+            <Link to={`/carshow/${id}`} className='no-underline' key={id}>
+              <div className='custom-card text-white bg-black rounded-md overflow-hidden custom-card'>
+                <div className='p-3'>
+                  <h2 className='font-header text-lg'>
+                    {year} {make} {model}
+                  </h2>
+                  <h3 className='flex gap-2 items-center text-sm'>
+                    <Distance /> {mileage}
+                  </h3>
+                  <h3 className='flex gap-2 items-center text-sm'>
+                    <BankNotes />{' '}
+                    {price.toLocaleString(undefined, {
+                      minimumFractionDigits: 2,
+                    })}
+                  </h3>
+                  <p className='line-clamp-3 text-sm'>{description}</p>
+                  
+                </div>
+
+                <img
+                  src={image}
+                  alt={`${year} ${make} ${model}`}
+                  className='object-cover object-center h-64 w-full'
+                />
+              </div>
+            </Link>
+          )
+        )}
+
+</Container>
   );
 };
 
