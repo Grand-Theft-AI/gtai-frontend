@@ -9,7 +9,7 @@ const appFeatures = [
         viewBox='0 0 24 24'
         strokeWidth={1.5}
         stroke='currentColor'
-        className='w-6 h-6'
+        className='w-12 h-12'
       >
         <path
           strokeLinecap='round'
@@ -30,7 +30,7 @@ const appFeatures = [
         viewBox='0 0 24 24'
         strokeWidth={1.5}
         stroke='currentColor'
-        className='w-6 h-6'
+        className='w-12 h-12'
       >
         <path
           strokeLinecap='round'
@@ -51,7 +51,7 @@ const appFeatures = [
         viewBox='0 0 24 24'
         strokeWidth={1.5}
         stroke='currentColor'
-        className='w-6 h-6'
+        className='w-12 h-12'
       >
         <path
           strokeLinecap='round'
@@ -70,9 +70,9 @@ const Features = () => {
   return (
     <Container className={"features"}>
       <h2 className='font-header text-4xl text-center'>Features</h2>
-      <div className='grid grid-cols-1 lg:grid-cols-3'>
+      <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
         {appFeatures.map((feature) => (
-          <div className='flex flex-col gap-2 p-2 text-center' key={feature.heading}>
+          <div className='flex flex-col gap-2 p-2 text-center bg-black/50 backdrop-blur' key={feature.heading}>
             <div className='flex gap-2 items-center flex-col'>
               {feature.icon}
               <h3 className='font-koll'>{feature.heading}</h3>
