@@ -4,7 +4,7 @@ import GTAI from '../assets/GTAI.png'
 
 const Navbar = ({ current_user }) => {
   return (
-    <nav className='bg-gradient-to-b from-black to-transparent'>
+    <nav className='bg-black/50 backdrop-blur'>
       <Container className='flex items-center'>
         <Link to='/' className='nav-link'>
           <span className='nav-link-text'>Home</span>
