@@ -13,7 +13,7 @@ const CarIndex = ({ cars }) => {
             <Link to={`/carshow/${id}`} className='no-underline' key={id}>
               <div className='custom-card text-white bg-black rounded-md overflow-hidden custom-card'>
                 <div className='p-3'>
-                  <h2 className='font-header text-lg'>
+                  <h2 className='text-lg'>
                     {year} {make} {model}
                   </h2>
                   <h3 className='flex gap-2 items-center text-sm'>

@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['Agrandir-Regular', ...defaultTheme.fontFamily.sans],
-      header: ['Kollektif-Bold', ...defaultTheme.fontFamily.sans],
+      header: ['Pricedown-bl', ...defaultTheme.fontFamily.sans],
     },
     extend: {},
   },
