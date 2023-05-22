@@ -1,14 +1,13 @@
 import { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import sketchy from '../assets/sketchy.png'
-
-
+import LabeledInput from '../components/LabeledInput'
 
 const Login = ({ login }) => {
   const navigate = useNavigate()
 
   const [email, setEmail] = useState('')
-  
+
   const [password, setPassword] = useState('')
 
   const handleSubmit = (e) => {
@@ -30,26 +29,16 @@ const Login = ({ login }) => {
           onSubmit={handleSubmit}
           className='max-w-xs w-full flex flex-col gap-2'
         >
-          <div className='flex flex-col'>
-            <label htmlFor='email'>Email</label>
-            <input
-              type='email'
-              id='email'
-              className='py-2 px-4 w-full flex-1 block border border-white bg-transparent'
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className='flex flex-col'>
-            <label htmlFor='password'>Password</label>
-            <input
-              type='password'
-              id='password'
-              className='py-2 px-4 w-full flex-1 block border border-white bg-transparent'
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
+          <LabeledInput
+            label='Email'
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <LabeledInput
+            label='Password'
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
           <button type='submit' className='bg-blue-900 py-2 px-4'>
             Login
           </button>
