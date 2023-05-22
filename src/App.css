@@ -79,7 +79,7 @@ h5 {
 
 .custom-card {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .custom-card2 {

@@ -42,7 +42,7 @@ const CarNew = ({ createCar }) => {
       <h1 className='font-header text-center'>New Listing</h1>
 
       <form
-        className='flex flex-col gap-2 max-w-screen-sm m-auto'
+        className='flex flex-col gap-2 max-w-screen-sm m-auto backdrop-blur bg-black/50 rounded-md p-4'
         onSubmit={(e) => handleSubmit(e)}
       >
         <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>

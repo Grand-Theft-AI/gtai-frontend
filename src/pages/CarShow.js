@@ -31,15 +31,15 @@ const CarShow = ({ cars, current_user }) => {
     <Container>
       {selectedCar && (
         <>
-          <div className='text-white bg-black rounded-md overflow-hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+          <div className='text-white bg-black/50 backdrop-blur rounded-md overflow-hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
             <img
               src={image}
               alt={`${year} ${make} ${model}`}
-              className='object-cover object-center h-64 w-full'
+              className='object-cover object-center h-full w-full'
             />
 
             <div className='p-3 lg:col-span-2'>
-              <h1 className='font-header text-lg'>
+              <h1 className='font-header text-lg mb-4'>
                 {year} {make} {model}
               </h1>
 
@@ -60,7 +60,7 @@ const CarShow = ({ cars, current_user }) => {
               <h2 className='flex gap-2 items-center text-sm text-blue-400'>
                 <Cal /> Listed: {formattedDate}
               </h2>
-              <p className='line-clamp-3 text-sm'>{description}</p>
+              <p className='text-sm'>{description}</p>
               {current_user && (
                 <NavLink to={`/caredit/${id}`} className='text-black bg-blue-400 no-underline pt-2 pb-1 px-8 rounded-md hover:bg-blue-300 transition-colors'>Edit Car</NavLink>
               )}

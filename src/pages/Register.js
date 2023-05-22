@@ -26,7 +26,7 @@ const Register = ({ register }) => {
 
         <form
           onSubmit={handleSubmit}
-          className='max-w-xs w-full flex flex-col gap-2'
+          className='max-w-sm w-full flex flex-col gap-2 bg-black/50 backdrop-blur p-4 rounded-md'
         >
           <LabeledInput
             label='Email'
@@ -35,6 +35,7 @@ const Register = ({ register }) => {
           />
           <LabeledInput
             label='Password'
+            type='password'
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
