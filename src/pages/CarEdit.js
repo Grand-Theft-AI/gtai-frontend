@@ -5,6 +5,7 @@ import stateLabelValues from '../constants/stateLabelValues'
 import Container from '../components/Container'
 import Button from '../components/Button'
 import Select from '../components/Select'
+import carMakes from '../constants/carMakes'
 
 const CarEdit = ({ updateCar, deleteCar, cars }) => {
   const navigate = useNavigate()
@@ -48,11 +49,7 @@ const CarEdit = ({ updateCar, deleteCar, cars }) => {
 
       <form className='flex flex-col gap-2 max-w-screen-sm m-auto backdrop-blur bg-black/50 rounded-md p-4' onSubmit={(e) => handleSubmit(e)}>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
-          <LabeledInput
-            label='Make'
-            value={make}
-            onChange={(e) => setMake(e.target.value)}
-          />
+          <Select label='Make' options={carMakes} value={make} onChange={e => setMake(e.target.value)} />
           <LabeledInput
             label='Model'
             value={model}
@@ -99,7 +96,7 @@ const CarEdit = ({ updateCar, deleteCar, cars }) => {
             onChange={(e) => setCity(e.target.value)}
           />
 
-          <Select label='State' options={stateLabelValues} />
+          <Select label='State' options={stateLabelValues} value={state} onChange={e => setState(e.target.value)} />
 
           <LabeledInput
             label='Zip'
