@@ -18,6 +18,10 @@ const AboutUs = () => {
                 <small className='smaller-card-text'>
                   "I feel like this could look better."
                 </small>
+                <br/>
+                <small className='smaller-card-text2'>
+                  Nikki really enjoys working on front-end development. Her dream job in tech is to design VST's for Image-Line.
+                </small>
               </CardText>
             </CardBody>
             <CardImg
@@ -38,6 +42,8 @@ const AboutUs = () => {
               <CardText tag='h4'>Tech Lead says</CardText>
               <CardText>
                 <small className='smaller-card-text'>"Uhhhhh..."</small>
+                <br/>
+                <small className='smaller-card-text2'>Ray takes pleasure in working on  development. His dream job in tech is to bakadabakada.</small>
               </CardText>
             </CardBody>
             <CardImg
@@ -58,6 +64,9 @@ const AboutUs = () => {
               <CardText tag='h4'>Project Manager says</CardText>
               <CardText>
                 <small className='smaller-card-text'>"Please hire me!"</small>
+                <br/>
+                <small className='smaller-card-text2'>Greg likes working on bakadabakada development. His dream job in tech is to bakadabakada.</small>
+            
               </CardText>
             </CardBody>
             <CardImg
@@ -78,6 +87,8 @@ const AboutUs = () => {
               <CardText tag='h4'>Product Manager</CardText>
               <CardText>
                 <small className='smaller-card-text'>"Hello" *British Accent*</small>
+                <br/>
+                <small className='smaller-card-text2'>Apolonio enjoys working on bakadabakada development. His dream job in tech is to bakadabakada.</small>
               </CardText>
             </CardBody>
             <CardImg
