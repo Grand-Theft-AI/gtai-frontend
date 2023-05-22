@@ -19,7 +19,7 @@ const Login = ({ login }) => {
 
   return (
     <div className='grid lg:grid-cols-2 min-h-screen'>
-      <div className='bg-black hidden lg:block shadow-xl shadow-black'>
+      <div className='bg-black/50 backdrop-blur hidden lg:block shadow-xl shadow-black'>
         <img src={sketchy} alt='Sketchy' className='w-full h-auto' />
       </div>
 
