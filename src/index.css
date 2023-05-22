@@ -12,3 +12,8 @@
   src: local('Kollektif-Bold'), url(./fonts/Kollektif-Bold.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'Pricedown-bl';
+  src: local('Pricedown-bl'), url(./fonts/pricedown\ bl.otf) format('opentype');
+}
+

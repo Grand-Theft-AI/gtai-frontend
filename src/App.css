@@ -47,9 +47,10 @@
   
 .nav-link-text {
     display: inline !important;
-    text-shadow: 0 0 5px #00ffff, 0 0 20px #00ffff;
+    text-shadow: 0 0 1px #006767, 0 0 20px #00ffff;
     margin-left: 10px;
-    font-family: "Agrandir-Regular";
+    font-family: "Pricedown";
+    font-size: 1.5rem
   }
 
 .nav-link-text:hover {
@@ -125,10 +126,9 @@
   }
 
   h1 {
-    font-family: "Agrandir-Regular" !important;
     color: white !important;
     font-weight: 700;
-    font-size: 3.3rem;
+    font-size: 3.5rem !important;
     padding-left: 10px;
     text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
     animation: neon-glow 1.5s linear infinite alternate;
@@ -139,7 +139,7 @@
       text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
     }
     to {
-      text-shadow: 0 0 20px rgba(0, 255, 255, 1), 0 0 3px rgba(0, 255, 255, 1), 0 0 0px rgba(0, 255, 255, 1);
+      text-shadow: 0 0 10px rgba(0, 255, 255, 1), 0 0 3px rgba(0, 255, 255, 1), 0 0 0px rgba(0, 255, 255, 1);
     }
   }
 
@@ -165,8 +165,7 @@
   .features {
     padding-top: 20px;
   }
-  
- 
+
 
   
 
