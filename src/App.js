@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -17,7 +17,10 @@ import mockCars from './mockCars'
 
 const BASE_URL = 'http://localhost:3000'
 
+
 const App = () => {
+  const navigate = useNavigate()
+
   const [currentUser, setCurrentUser] = useState(null)
 
   const [cars, setCars] = useState(mockCars)
@@ -120,13 +123,31 @@ const App = () => {
       })
   }
 
+  const logout = () => {
+    fetch('BASE_URL', {
+      headers: {
+        "Content-Type": 'application/json',
+        "Authorization": localStorage.getItem("token") //retrieve the token 
+      },
+      method: 'DELETE'
+    })
+    .then(payload => {
+    localStorage.removeItem("token")  // remove the token
+    navigate('/')
+    setCurrentUser(null)
+  })
+  .catch(error => console.log("log out errors: ", error))
+  }
+
+
+  
   useEffect(() => {
     readCars()
   }, [])
 
   return (
     <>
-      <Navbar current_user={currentUser} />
+      <Navbar current_user={currentUser} logout={logout}/>
       <main>
         <Routes>
           <Route path='/' element={<Home />} />

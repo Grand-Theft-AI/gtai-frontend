@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import Container from './Container'
 import GTAI from '../assets/GTAI.png'
 
-const Navbar = ( {current_user} ) => {
+const Navbar = ( {current_user, logout} ) => {
   return (
     <nav className='navbar'>
       <Container>
@@ -10,10 +10,16 @@ const Navbar = ( {current_user} ) => {
           <span className='nav-link-text'>HOME</span>
         </Link>
         {current_user && (
+          <>
+        <Link to= '/' className='nav-link'>
+          <span className= 'nav-link-text' onClick={logout}>LOG OUT</span>
+        </Link>
         <Link to='/mycars' className='nav-link'>
           <span className='nav-link-text'>DASHBOARD</span>
         </Link>
+        </>
         )}
+
         <Link to='/carindex' className='nav-link'>
           <span className='nav-link-text'>VIEW LISTINGS</span>
         </Link>
@@ -30,6 +36,7 @@ const Navbar = ( {current_user} ) => {
         <Link to='/register' className='nav-link'>
           <span className='nav-link-text'>REGISTER</span>
         </Link>
+
         </>
           )}
       </Container>
