@@ -7,7 +7,7 @@ const MyCars = ({ cars, current_user }) => {
   const amountOfStolenCars = myCars.length
   const costOfStolenCars = myCars
     .map((car) => car.price)
-    .reduce((a, b) => a + b)
+    .reduce((a, b) => a + b, 0)
 
   return (
     <Container className='flex flex-col'>
