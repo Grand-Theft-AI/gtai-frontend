@@ -4,6 +4,7 @@ import LabeledInput from '../components/LabeledInput'
 import stateLabelValues from '../constants/stateLabelValues'
 import Container from '../components/Container'
 import Button from '../components/Button'
+import Select from '../components/Select'
 
 const CarNew = ({ createCar }) => {
   const navigate = useNavigate()
@@ -97,22 +98,7 @@ const CarNew = ({ createCar }) => {
             onChange={(e) => setCity(e.target.value)}
           />
 
-            <div className='flex flex-col gap-2'>
-          <label htmlFor='state'>State</label>
-
-          <select
-            name='state'
-            id='state'
-            value={state}
-            onChange={(e) => setState(e.target.value)}
-          >
-            {stateLabelValues.map((state) => (
-              <option value={state.value} key={state.value}>
-                {state.label}
-              </option>
-            ))}
-          </select>
-          </div>
+          <Select label='State' options={stateLabelValues} />
 
           <LabeledInput
             label='Zip'
