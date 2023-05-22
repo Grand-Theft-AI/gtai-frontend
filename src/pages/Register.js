@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import sell from '../assets/sell.png'
-import LabeledInput from '../components/LabeledInput'
-import Button from '../components/Button'
+import { LabeledInput, Button } from '../components'
 
 const Register = ({ register }) => {
   const navigate = useNavigate()

@@ -1,5 +1,4 @@
-import Features from '../components/Features'
-import Slider from '../components/Slider'
+import { Features, Slider } from '../components'
 
 const Home = () => {
   return (
