@@ -5,6 +5,8 @@ import CarCard from '../components/CarCard'
 
 const MyCars = ({ cars, current_user }) => {
   const myCars = cars?.filter((car) => current_user?.id === car.user_id)
+  const amountOfStolenCars = myCars.length
+  const costOfStolenCars = myCars.map(car => car.price).reduce((a, b) => a + b)
 
   return (
     <Container className='flex flex-col'>
@@ -15,7 +17,7 @@ const MyCars = ({ cars, current_user }) => {
       <div className='flex flex-col items-center justify-center'></div>
       <div className='flex gap-x-6 sm:gap-x-10 m-40'>
         <div className='text-[40px] font-tertiary text-white mb-2'>
-          {InView ? <CountUp start={0} end={20} duration={3} /> : null}
+          {InView ? <CountUp start={0} end={amountOfStolenCars} duration={3} /> : null}
         </div>
         <div className='font-header text-sm tracking-[2px]'>
           Amount of Cars <br />
@@ -29,7 +31,7 @@ const MyCars = ({ cars, current_user }) => {
             <CountUp
               prefix='$'
               start={0}
-              end={200000}
+              end={costOfStolenCars}
               duration={3}
               formattingFn={(value) => `$${(value / 1000).toFixed(1)}K`}
             />
