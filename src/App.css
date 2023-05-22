@@ -145,7 +145,16 @@ h1 {
   justify-content: center !important;
   height: 90vh;
   margin-left: 25%;
-}
+  }
+
+  .imageInSquare {
+    position: absolute
+
+  }
+
+  .features {
+    padding-top: 15px;
+  }
 
 .imageInSquare {
   position: absolute;
