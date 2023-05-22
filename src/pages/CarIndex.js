@@ -1,5 +1,4 @@
-import CarCard from '../components/CarCard'
-import Container from '../components/Container'
+import { CarCard, Container } from '../components'
 
 const CarIndex = ({ cars }) => {
   return (

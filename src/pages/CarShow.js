@@ -1,6 +1,5 @@
 import { useParams, NavLink } from 'react-router-dom'
-import Container from '../components/Container'
-import { Distance, BankNotes, MapPin, Cal } from '../components/icons'
+import { Container, Distance, BankNotes, MapPin, Cal } from '../components'
 
 const CarShow = ({ cars, current_user }) => {
   const { id } = useParams()
@@ -62,7 +61,12 @@ const CarShow = ({ cars, current_user }) => {
               </h2>
               <p className='text-sm'>{description}</p>
               {current_user && (
-                <NavLink to={`/caredit/${id}`} className='text-black bg-blue-400 no-underline pt-2 pb-1 px-8 rounded-md hover:bg-blue-300 transition-colors'>Edit Car</NavLink>
+                <NavLink
+                  to={`/caredit/${id}`}
+                  className='text-black bg-blue-400 no-underline pt-2 pb-1 px-8 rounded-md hover:bg-blue-300 transition-colors'
+                >
+                  Edit Car
+                </NavLink>
               )}
             </div>
           </div>

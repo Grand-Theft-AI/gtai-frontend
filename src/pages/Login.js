@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import sketchy from '../assets/sketchy.png'
-import LabeledInput from '../components/LabeledInput'
-import Button from '../components/Button'
+import { LabeledInput, Button } from '../components'
 
 const Login = ({ login }) => {
   const navigate = useNavigate()
