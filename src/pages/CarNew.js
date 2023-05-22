@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import LabeledInput from '../components/LabeledInput'
 import stateLabelValues from '../constants/stateLabelValues'
+import carMakes from '../constants/carMakes'
 import Container from '../components/Container'
 import Button from '../components/Button'
 import Select from '../components/Select'
@@ -47,11 +48,9 @@ const CarNew = ({ createCar }) => {
         onSubmit={(e) => handleSubmit(e)}
       >
         <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
-          <LabeledInput
-            label='Make'
-            value={make}
-            onChange={(e) => setMake(e.target.value)}
-          />
+
+          <Select label='Make' options={carMakes} value={make} onChange={e => setMake(e.target.value)} />
+
           <LabeledInput
             label='Model'
             value={model}
@@ -98,7 +97,7 @@ const CarNew = ({ createCar }) => {
             onChange={(e) => setCity(e.target.value)}
           />
 
-          <Select label='State' options={stateLabelValues} />
+          <Select label='State' options={stateLabelValues} value={state} onChange={e => setState(e.target.value)} />
 
           <LabeledInput
             label='Zip'
