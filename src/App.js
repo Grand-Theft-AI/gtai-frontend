@@ -145,7 +145,7 @@ const App = () => {
   return (
     <>
       <Navbar current_user={currentUser} logout={logout}/>
-      <main className='flex-1'>
+      <main className='flex-1 mb-24'>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/carnew' element={<CarNew createCar={createCar} />} />
