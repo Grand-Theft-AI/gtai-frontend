@@ -1,7 +1,7 @@
 import { useParams, NavLink } from 'react-router-dom'
-import { Container, Distance, BankNotes, MapPin, Cal } from '../components'
+import { Container, Distance, BankNotes, MapPin, Cal, Button } from '../components'
 
-const CarShow = ({ cars, current_user }) => {
+const CarShow = ({ cars, current_user, updateCar }) => {
   const { id } = useParams()
   let selectedCar = cars?.find((car) => car.id === +id)
   const {
@@ -61,12 +61,35 @@ const CarShow = ({ cars, current_user }) => {
               </h2>
               <p className='text-sm'>{description}</p>
               {current_user && (
+                <>
                 <NavLink
                   to={`/caredit/${id}`}
                   className='text-black bg-blue-400 no-underline pt-2 pb-1 px-8 rounded-md hover:bg-blue-300 transition-colors'
                 >
                   Edit Car
                 </NavLink>
+                <Button
+                  onClick={() => {
+                    updateCar({
+                      id,
+                      make,
+                      model,
+                      year,
+                      mileage,
+                      image,
+                      price,
+                      description,
+                      street,
+                      city,
+                      state,
+                      zip,
+                      user_id: current_user.id
+                    })
+                  }}
+                >
+                  Steal Car
+                </Button>
+                </>
               )}
             </div>
           </div>

@@ -151,7 +151,7 @@ const App = () => {
           <Route path='/carnew' element={<CarNew createCar={createCar} />} />
           <Route
             path='/carshow/:id'
-            element={<CarShow cars={cars} current_user={currentUser} />}
+            element={<CarShow cars={cars} current_user={currentUser} updateCar={updateCar} />}
           />
           <Route
             path='/caredit/:id'
