@@ -142,13 +142,6 @@ h1 {
   z-index: 1;
 }
 
-.not-found-image {
-  align-items: center !important;
-  justify-content: center !important;
-  height: 90vh;
-  margin-left: 25%;
-}
-
 .imageInSquare {
   position: absolute;
 }
