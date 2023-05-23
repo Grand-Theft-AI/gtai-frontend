@@ -43,6 +43,8 @@ GTAI is a web application that allows users to buy cars and store them in a data
 - Start the server: $ yarn start
 
 ## Tech Used
+- Rails version 7.0.4.3
+- Ruby version 3.2
 - [React](https://react.dev/)
 - [Tailwindcss](https://tailwindcss.com/)
 - [Reactstrap](https://reactstrap.github.io/)
