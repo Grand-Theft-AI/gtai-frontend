@@ -1,10 +1,11 @@
-import { Features, Slider } from '../components'
+import { Features, MyHumps, Slider } from '../components'
 
 const Home = () => {
   return (
     <>
       <Slider />
       <Features />
+      <MyHumps />
     </>
   )
 }
