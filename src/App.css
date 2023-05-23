@@ -155,15 +155,11 @@ h1 {
   }
 
   .features {
-    padding-top: 15px;
+    padding-top: 1px;
   }
 
 .imageInSquare {
   position: absolute;
-}
-
-.features {
-  padding-top: 20px;
 }
 
 .smaller-card-text2 {
