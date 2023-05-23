@@ -165,3 +165,23 @@ h1 {
 .smaller-card-text2 {
   color: rgb(203, 100, 255)
 }
+
+.glowing-numbers {
+  animation: glowing-animation 2s ease-in-out infinite;
+}
+
+.glowing-numbers {
+  animation: glowing-animation 2s linear infinite;
+}
+
+@keyframes glowing-animation {
+  0% {
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 100px #00ff00;
+  }
+  50% {
+    text-shadow: 0 0 50px #00ff00, 0 0 40px #00ff00, 0 0 80px #00ff00;
+  }
+  100% {
+    text-shadow: 0 0 0px #00ff00, 0 10 90px #00ff00, 0 0 80px #00ff00;
+  }
+}
