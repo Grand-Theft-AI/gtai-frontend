@@ -29,17 +29,18 @@ const MyCars = ({ cars, current_user }) => {
       </div>
 
       <div className='flex gap-x-6 sm:gap-x-10 m-40'>
-        <div className='text-[40px] font-tertiary text-green-600 mb-2'>
-          {InView ? (
-            <CountUp
-              prefix='$'
-              start={0}
-              end={costOfStolenCars}
-              duration={3}
-              formattingFn={(value) => `$${(value / 1000).toFixed(1)}K`}
-            />
-          ) : null}
-        </div>
+      <div className='text-[40px] font-tertiary text-green-600 mb-2'>
+  {InView ? (
+    <CountUp
+      prefix='$'
+      start={0}
+      end={costOfStolenCars}
+      duration={3}
+      formattingFn={(value) => `$${(value / 1000).toFixed(1)}K`}
+      className='glowing-numbers' // Add a class name for styling
+    />
+  ) : null}
+</div>
         <div className='font-header text-xl tracking-[2px]'>
           Total Net Worth of <br />
           Cars Stolen
