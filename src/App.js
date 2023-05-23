@@ -14,7 +14,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import './App.css'
 import mockCars from './mockCars'
-import {baseUrl} from './constants'
+import { baseUrl } from './constants'
 
 const App = () => {
   const navigate = useNavigate()
@@ -124,17 +124,17 @@ const App = () => {
   const logout = () => {
     fetch(`${baseUrl}/logout`, {
       headers: {
-        "Content-Type": 'application/json',
-        "Authorization": localStorage.getItem("token") //retrieve the token 
+        'Content-Type': 'application/json',
+        Authorization: localStorage.getItem('token'), //retrieve the token
       },
-      method: 'DELETE'
+      method: 'DELETE',
     })
-    .then(payload => {
-    localStorage.removeItem("token")  // remove the token
-    navigate('/')
-    setCurrentUser(null)
-  })
-  .catch(error => console.log("log out errors: ", error))
+      .then((payload) => {
+        localStorage.removeItem('token') // remove the token
+        navigate('/')
+        setCurrentUser(null)
+      })
+      .catch((error) => console.log('log out errors: ', error))
   }
 
   useEffect(() => {
@@ -143,14 +143,20 @@ const App = () => {
 
   return (
     <>
-      <Navbar current_user={currentUser} logout={logout}/>
+      <Navbar current_user={currentUser} logout={logout} />
       <main className='flex-1 mb-24'>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/carnew' element={<CarNew createCar={createCar} />} />
           <Route
             path='/carshow/:id'
-            element={<CarShow cars={cars} current_user={currentUser} updateCar={updateCar} />}
+            element={
+              <CarShow
+                cars={cars}
+                current_user={currentUser}
+                updateCar={updateCar}
+              />
+            }
           />
           <Route
             path='/caredit/:id'
