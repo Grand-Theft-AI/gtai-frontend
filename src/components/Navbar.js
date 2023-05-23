@@ -6,7 +6,7 @@ const Navbar = ( {current_user, logout} ) => {
   return (
     <nav className='bg-black/50 backdrop-blur'>
       <Container className='flex flex-col md:flex-row md:items-center'>
-        <Link to='/' className='flex-1'>
+        <Link to='/' className='flex-1 logo-link'>
           <img src={GTAI} alt='Logo' className='w-20 h-20 object-contain' />
         </Link>
         <Link to='/' className='nav-link'>

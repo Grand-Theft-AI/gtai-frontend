@@ -1,4 +1,5 @@
 export { default as Button } from './Button'
+export { default as MyHumps } from './MyHumps'
 export { default as CarCard } from './CarCard'
 export { default as Container } from './Container'
 export { default as Features } from './Features'
