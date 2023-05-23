@@ -37,7 +37,7 @@ const CarNew = ({ createCar }) => {
 
   return (
     <Container>
-      <h1 className='font-header text-center'>New Listing</h1>
+      <h1 className='font-header text-center mb-10'>New Listing</h1>
 
       <form
         className='flex flex-col gap-2 max-w-screen-sm m-auto backdrop-blur bg-black/50 rounded-md p-4'

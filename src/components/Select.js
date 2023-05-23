@@ -10,7 +10,7 @@ const Select = ({ label, options, ...rest }) => {
       <select
         id={id}
         {...rest}
-        className='pt-2 pb-1 px-2 w-full flex-1 block border-white border bg-transparent rounded-md'
+        className='pt-2 pb-1 px-2 w-full flex-1 block border-b border-white/50 outline-none focus:bg-white/20 bg-white/0 rounded-t-md'
       >
         {options.map(({ value, label }) => (
           <option value={value} key={value}>
