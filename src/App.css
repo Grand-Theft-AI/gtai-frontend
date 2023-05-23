@@ -147,23 +147,22 @@ h1 {
   justify-content: center !important;
   height: 90vh;
   margin-left: 25%;
-  }
+}
 
-  .imageInSquare {
-    position: absolute
+.imageInSquare {
+  position: absolute;
+}
 
-  }
-
-  .features {
-    padding-top: 1px;
-  }
+.features {
+  padding-top: 1px;
+}
 
 .imageInSquare {
   position: absolute;
 }
 
 .smaller-card-text2 {
-  color: rgb(203, 100, 255)
+  color: rgb(203, 100, 255);
 }
 
 .glowing-numbers {
