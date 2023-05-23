@@ -14,8 +14,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import './App.css'
 import mockCars from './mockCars'
-
-const BASE_URL = 'https://gtai-backend.onrender.com'
+import {baseUrl} from './constants'
 
 const App = () => {
   const navigate = useNavigate()
@@ -25,7 +24,7 @@ const App = () => {
   const [cars, setCars] = useState(mockCars)
 
   const createCar = (newCar) => {
-    fetch(`${BASE_URL}/cars`, {
+    fetch(`${baseUrl}/cars`, {
       body: JSON.stringify(newCar),
       headers: {
         'Content-Type': 'application/json',
@@ -38,14 +37,14 @@ const App = () => {
   }
 
   const readCars = () => {
-    fetch(`${BASE_URL}/cars`)
+    fetch(`${baseUrl}/cars`)
       .then((res) => res.json())
       .then((data) => setCars(data))
       .catch((error) => console.error('Car read error: ', error))
   }
 
   const updateCar = (newCar) => {
-    fetch(`${BASE_URL}/cars/${newCar.id}`, {
+    fetch(`${baseUrl}/cars/${newCar.id}`, {
       body: JSON.stringify(newCar),
       headers: {
         'Content-Type': 'application/json',
@@ -58,7 +57,7 @@ const App = () => {
   }
 
   const deleteCar = (id) => {
-    fetch(`${BASE_URL}/cars/${id}`, {
+    fetch(`${baseUrl}/cars/${id}`, {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -74,7 +73,7 @@ const App = () => {
       user: { email, password },
     }
 
-    fetch(`${BASE_URL}/register`, {
+    fetch(`${baseUrl}/register`, {
       body: JSON.stringify(userInfo),
       headers: {
         'Content-Type': 'application/json',
@@ -100,7 +99,7 @@ const App = () => {
       user: { email, password },
     }
 
-    fetch(`${BASE_URL}/login`, {
+    fetch(`${baseUrl}/login`, {
       body: JSON.stringify(userInfo),
       headers: {
         'Content-Type': 'application/json',
@@ -123,7 +122,7 @@ const App = () => {
   }
 
   const logout = () => {
-    fetch('BASE_URL', {
+    fetch(`${baseUrl}/logout`, {
       headers: {
         "Content-Type": 'application/json',
         "Authorization": localStorage.getItem("token") //retrieve the token 
