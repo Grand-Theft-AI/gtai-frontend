@@ -12,7 +12,7 @@ const MyCars = ({ cars, current_user }) => {
   return (
     <Container className='flex flex-col'>
       <div>
-        <h1 className='font-header'>MY CARS</h1>
+        <h1 className='font-header text-center'>MY CARS</h1>
       </div>
 
       <div className='flex flex-col items-center justify-center'></div>
