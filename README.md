@@ -40,7 +40,7 @@ GTAI is a web application that allows users to buy cars and store them in a data
 - Clone the frontend repository by running the following command: $ ```git clone https://github.com/Grand-Theft-AI/gtai-frontend.git```
 - Navigate into the frontend directory: $ ```cd gtai-frontend```
 - Install necessary dependencies: $ ```yarn```
-- Start the server: $ ```yarn start```
+- Start the server: $ `yarn start`
 
 ## Tech Used
 - Rails version 7.0.4.3
