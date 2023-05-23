@@ -22,14 +22,14 @@ const MyCars = ({ cars, current_user }) => {
             <CountUp start={0} end={amountOfStolenCars} duration={3} />
           ) : null}
         </div>
-        <div className='font-header text-sm tracking-[2px]'>
+        <div className='font-header text-xl tracking-[2px]'>
           Amount of Cars <br />
           Stolen
         </div>
       </div>
 
       <div className='flex gap-x-6 sm:gap-x-10 m-40'>
-        <div className='text-[40px] font-tertiary text-white mb-2'>
+        <div className='text-[40px] font-tertiary text-green-600 mb-2'>
           {InView ? (
             <CountUp
               prefix='$'
@@ -40,7 +40,7 @@ const MyCars = ({ cars, current_user }) => {
             />
           ) : null}
         </div>
-        <div className='font-header text-sm tracking-[2px]'>
+        <div className='font-header text-xl tracking-[2px]'>
           Total Net Worth of <br />
           Cars Stolen
         </div>
