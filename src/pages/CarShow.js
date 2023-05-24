@@ -1,4 +1,4 @@
-import { useParams, NavLink } from 'react-router-dom'
+import { useParams, NavLink, Link } from 'react-router-dom'
 import {
   Container,
   Distance,
@@ -6,6 +6,7 @@ import {
   MapPin,
   Cal,
   Button,
+  Left,
 } from '../components'
 
 const CarShow = ({ cars, current_user, updateCar }) => {
@@ -27,6 +28,7 @@ const CarShow = ({ cars, current_user, updateCar }) => {
 
   return (
     <Container>
+      <Link to='/carindex' className='mt-10 bg-white/5 hover:bg-white/20 transition-colors px-4 py-2.5 text-white no-underline backdrop-blur rounded-md flex w-fit gap-2 items-center'><Left /><span className='mt-1'>Back</span></Link>
       {selectedCar && (
         <>
           <div className='text-white bg-black/50 backdrop-blur rounded-md overflow-hidden flex flex-col my-10'>
