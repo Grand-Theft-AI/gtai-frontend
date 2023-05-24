@@ -7,22 +7,6 @@ body {
   background-attachment: fixed;
 }
 
-h3 {
-  color: white;
-  font-size: 1rem !important;
-}
-
-h4 {
-  color: white;
-  font-size: 0.9rem !important;
-}
-
-h5 {
-  color: white;
-  text-align: center;
-  font-family: 'Kollektif-Bold';
-}
-
 .carousel:after {
   content: '';
   position: absolute;
@@ -138,10 +122,6 @@ h1 {
 
 .imageInSquare {
   position: absolute;
-}
-
-.features {
-  padding-top: 1px;
 }
 
 .imageInSquare {
