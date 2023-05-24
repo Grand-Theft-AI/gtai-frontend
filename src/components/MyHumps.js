@@ -13,13 +13,14 @@ const colors = [
 
 const MyHumps = () => {
   return (
-    <Marquee className='py-5 my-5 bg-black/50 backdrop-blur flex items-center' gradient gradientColor={[0, 0, 0]}>
-      {myHumps.map((line) => {
+    <Marquee
+      className='py-5 my-5 bg-black/50 backdrop-blur flex items-center'
+      gradient
+      gradientColor={[0, 0, 0]}
+    >
+      {myHumps.map((line, index) => {
         const randomIndex = Math.floor(Math.random() * colors.length)
-          return (
-
-        <span className={`px-10 ${colors[randomIndex]}`}>{line}</span>
-          )
+        return <span key={index} className={`px-10 ${colors[randomIndex]}`}>{line}</span>
       })}
     </Marquee>
   )
