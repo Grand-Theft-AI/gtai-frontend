@@ -19,10 +19,10 @@ const CarCard = ({
             {year} {make} {model}
           </h2>
           <h3 className='flex gap-2 items-center text-sm'>
-            <Distance /> {mileage}
+            <Distance /> {mileage.toLocaleString()}
           </h3>
           <h3 className='flex gap-2 items-center text-sm'>
-            <BankNotes />{' '}
+            <BankNotes /> $
             {price.toLocaleString(undefined, {
               minimumFractionDigits: 2,
             })}
