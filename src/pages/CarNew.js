@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { LabeledInput, Container, Button, Select } from '../components'
+import { LabeledInput, Container, Button, Select, Plus } from '../components'
 import { stateLabelValues, carMakes } from '../constants'
 
 const CarNew = ({ createCar }) => {
@@ -122,7 +122,7 @@ const CarNew = ({ createCar }) => {
           />
         </div>
 
-        <Button type='submit'>Create Listing</Button>
+        <Button type='submit' icon={<Plus />} >Create Listing</Button>
       </form>
     </Container>
   )

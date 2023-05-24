@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import sell from '../assets/sell.png'
-import { LabeledInput, Button } from '../components'
+import { LabeledInput, Button, RegisterIcon } from '../components'
 
 const Register = ({ register }) => {
   const navigate = useNavigate()
@@ -38,7 +38,9 @@ const Register = ({ register }) => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <Button type='submit'>Register</Button>
+          <Button type='submit' icon={<RegisterIcon />}>
+            Register
+          </Button>
         </form>
         <span>
           Already have an account?{' '}

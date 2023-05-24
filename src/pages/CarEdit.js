@@ -1,6 +1,13 @@
 import { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { LabeledInput, Container, Button, Select } from '../components'
+import {
+  LabeledInput,
+  Container,
+  Button,
+  Select,
+  Trash,
+  Edit,
+} from '../components'
 import { stateLabelValues, carMakes } from '../constants'
 
 const CarEdit = ({ updateCar, deleteCar, cars }) => {
@@ -132,10 +139,13 @@ const CarEdit = ({ updateCar, deleteCar, cars }) => {
               deleteCar(id)
             }}
             type='button'
+            icon={<Trash />}
           >
             Delete Car
           </Button>
-          <Button type='submit'>Update Car</Button>
+          <Button type='submit' icon={<Edit />}>
+            Update Car
+          </Button>
         </div>
       </form>
     </Container>

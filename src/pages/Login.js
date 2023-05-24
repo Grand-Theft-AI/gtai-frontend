@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import sketchy from '../assets/sketchy.png'
-import { LabeledInput, Button } from '../components'
+import { LabeledInput, Button, LoginIcon } from '../components'
 
 const Login = ({ login }) => {
   const navigate = useNavigate()
@@ -40,7 +40,9 @@ const Login = ({ login }) => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <Button type='submit'>Login</Button>
+          <Button type='submit' icon={<LoginIcon />}>
+            Login
+          </Button>
         </form>
         <span>
           Don't have an account?{' '}
