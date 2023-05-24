@@ -7,6 +7,8 @@ import {
   Cal,
   Button,
   Left,
+  Close,
+  Edit,
 } from '../components'
 
 const CarShow = ({ cars, current_user, updateCar }) => {
@@ -29,7 +31,13 @@ const CarShow = ({ cars, current_user, updateCar }) => {
 
   return (
     <Container>
-      <Link to='/carindex' className='mt-10 bg-white/5 hover:bg-white/20 transition-colors px-4 py-2.5 text-white no-underline backdrop-blur rounded-md flex w-fit gap-2 items-center'><Left /><span className='mt-1'>Back</span></Link>
+      <Link
+        to='/carindex'
+        className='mt-10 bg-white/5 hover:bg-white/20 transition-colors px-4 py-2.5 text-white no-underline backdrop-blur rounded-md flex w-fit gap-2 items-center'
+      >
+        <Left />
+        <span className='mt-1'>Back</span>
+      </Link>
       {selectedCar && (
         <>
           <div className='text-white bg-black/50 backdrop-blur rounded-md overflow-hidden flex flex-col my-10'>
@@ -60,14 +68,15 @@ const CarShow = ({ cars, current_user, updateCar }) => {
               )}
               <p className='text-sm'>{description}</p>
               {current_user && (
-                <>
-                  <NavLink
-                    to={`/caredit/${id}`}
-                    className='text-black bg-blue-400 no-underline pt-2 pb-1 px-8 rounded-md hover:bg-blue-300 transition-colors'
+                <div className='grid grid-cols-1 sm:grid-cols-2 gap-2'>
+                  <Button
+                    icon={<Edit />}
+                    onClick={(_) => navigate(`/caredit/${id}`)}
                   >
                     Edit Car
-                  </NavLink>
+                  </Button>
                   <Button
+                    color='danger'
                     onClick={() => {
                       updateCar({
                         id,
@@ -86,10 +95,11 @@ const CarShow = ({ cars, current_user, updateCar }) => {
                       })
                       navigate('/mycars')
                     }}
+                    icon={<Close />}
                   >
                     Steal Car
                   </Button>
-                </>
+                </div>
               )}
             </div>
           </div>
