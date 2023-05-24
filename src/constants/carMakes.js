@@ -6,7 +6,6 @@ const carMakes = [
   { label: 'Lamborghini', value: 'Lamborghini' },
   { label: 'Maserati', value: 'Maserati' },
   { label: 'McLaren', value: 'McLaren' },
-  { label: 'Porsche', value: 'Porsche' },
   { label: 'Rolls-Royce', value: 'Rolls-Royce' },
   { label: 'Acura', value: 'Acura' },
   { label: 'Alfa Romeo', value: 'Alfa Romeo' },
