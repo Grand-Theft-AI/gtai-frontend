@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { LabeledInput, Container, Button, Select } from '../components'
-import {stateLabelValues, carMakes} from '../constants'
+import { LabeledInput, Container, Button, Select, Plus } from '../components'
+import { stateLabelValues, carMakes } from '../constants'
 
 const CarNew = ({ createCar }) => {
   const navigate = useNavigate()
@@ -49,18 +49,21 @@ const CarNew = ({ createCar }) => {
             options={carMakes}
             value={make}
             onChange={(e) => setMake(e.target.value)}
+            required
           />
 
           <LabeledInput
             label='Model'
             value={model}
             onChange={(e) => setModel(e.target.value)}
+            required
           />
           <LabeledInput
             label='Year'
             type='number'
             value={year}
             onChange={(e) => setYear(e.target.value)}
+            required
           />
         </div>
         <LabeledInput
@@ -68,33 +71,39 @@ const CarNew = ({ createCar }) => {
           type='number'
           value={mileage}
           onChange={(e) => setMileage(e.target.value)}
+          required
         />
         <LabeledInput
           label='Image'
           value={image}
           onChange={(e) => setImage(e.target.value)}
+          required
         />
         <LabeledInput
           label='Price'
           type='number'
           value={price}
           onChange={(e) => setPrice(e.target.value)}
+          required
         />
         <LabeledInput
           label='Description'
           value={description}
           onChange={(e) => setDescription(e.target.value)}
+          required
         />
         <div className='grid grid-cols-1 md:grid-cols-2 gap-2'>
           <LabeledInput
             label='Street'
             value={street}
             onChange={(e) => setStreet(e.target.value)}
+            required
           />
           <LabeledInput
             label='City'
             value={city}
             onChange={(e) => setCity(e.target.value)}
+            required
           />
 
           <Select
@@ -102,16 +111,18 @@ const CarNew = ({ createCar }) => {
             options={stateLabelValues}
             value={state}
             onChange={(e) => setState(e.target.value)}
+            required
           />
 
           <LabeledInput
             label='Zip'
             value={zip}
             onChange={(e) => setZip(e.target.value)}
+            required
           />
         </div>
 
-        <Button type='submit'>Create Listing</Button>
+        <Button type='submit' icon={<Plus />} >Create Listing</Button>
       </form>
     </Container>
   )
