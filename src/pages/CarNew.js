@@ -5,7 +5,7 @@ import {stateLabelValues, carMakes} from '../constants'
 
 const CarNew = ({ createCar }) => {
   const navigate = useNavigate()
-  const [make, setMake] = useState('')
+  const [make, setMake] = useState(carMakes[0].value)
   const [model, setModel] = useState('')
   const [year, setYear] = useState(2023)
   const [mileage, setMileage] = useState(0)
