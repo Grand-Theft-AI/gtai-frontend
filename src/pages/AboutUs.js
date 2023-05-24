@@ -1,4 +1,4 @@
-import { Card, CardBody, CardTitle, CardText, CardImg } from 'reactstrap'
+import { Card, CardBody, CardText, CardImg } from 'reactstrap'
 import { Container } from '../components'
 import { team } from '../constants'
 
@@ -10,8 +10,8 @@ const AboutUs = () => {
         {team.map(({ name, title, quote, linkedin, image, description }) => (
             <Card className='custom-card2 no-underline' tag='a' href={linkedin} target='_blank' rel='noopener noreferrer'>
               <CardBody>
-                <CardTitle tag='h5' className='text-lg'>{name}</CardTitle>
-                <CardText tag='h4' className='text-center'>{title} says</CardText>
+                <h2 className='text-xl text-white font-koll text-center'>{name}</h2>
+                <h3 className='text-center text-base text-white'>{title} says</h3>
                 <CardText className='text-center'>
                   <small className='smaller-card-text'>"{quote}"</small>
                   <br />
