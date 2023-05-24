@@ -13,7 +13,6 @@ h3 {
 }
 
 h4 {
-  font-family: 'Agrandir';
   color: white;
   font-size: 0.9rem !important;
 }
@@ -22,7 +21,6 @@ h5 {
   color: white;
   text-align: center;
   font-family: 'Kollektif-Bold';
-  font-size: 0.9rem !important;
 }
 
 .carousel:after {
@@ -85,14 +83,10 @@ h5 {
 }
 
 .custom-card2 {
-  width: 325px;
-  height: 10px;
-  display: inline-block !important;
-  margin: 15px;
-  background-color: black !important;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.5) !important;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  backdrop-filter: blur(8px);
 }
 
 .custom-card:hover,
