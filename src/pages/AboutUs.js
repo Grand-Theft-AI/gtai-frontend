@@ -9,12 +9,12 @@ const AboutUs = () => {
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
         {team.map(({ name, title, quote, linkedin, image, description }) => (
           <Card
+            key={name}
             className='custom-card2 no-underline'
             tag='a'
             href={linkedin}
             target='_blank'
             rel='noopener noreferrer'
-            key={name}
           >
             <CardBody>
               <h2 className='text-xl text-white font-koll text-center'>
