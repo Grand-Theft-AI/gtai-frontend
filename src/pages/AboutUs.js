@@ -14,6 +14,7 @@ const AboutUs = () => {
             href={linkedin}
             target='_blank'
             rel='noopener noreferrer'
+            key={name}
           >
             <CardBody>
               <h2 className='text-xl text-white font-koll text-center'>
