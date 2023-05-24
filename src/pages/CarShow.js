@@ -1,4 +1,4 @@
-import { useParams, NavLink, Link } from 'react-router-dom'
+import { useParams, NavLink, Link, useNavigate } from 'react-router-dom'
 import {
   Container,
   Distance,
@@ -11,6 +11,7 @@ import {
 
 const CarShow = ({ cars, current_user, updateCar }) => {
   const { id } = useParams()
+  const navigate = useNavigate()
   let selectedCar = cars?.find((car) => car.id === +id)
   const {
     make,
@@ -83,6 +84,7 @@ const CarShow = ({ cars, current_user, updateCar }) => {
                         zip,
                         user_id: current_user.id,
                       })
+                      navigate('/mycars')
                     }}
                   >
                     Steal Car
