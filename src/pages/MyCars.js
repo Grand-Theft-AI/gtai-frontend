@@ -11,48 +11,50 @@ const MyCars = ({ cars, current_user }) => {
 
   return (
     <Container className='flex flex-col'>
-      <div>
-        <h1 className='font-header text-center'>MY CARS</h1>
-      </div>
+  <div>
+    <h1 className='font-header text-center'>MY CARS</h1>
+  </div>
 
-      <div className='flex flex-col items-center justify-center'></div>
-      <div className='flex gap-x-6 sm:gap-x-10 m-40'>
-        <div className='text-[40px] font-tertiary text-white mb-2'>
-          {InView ? (
-            <CountUp start={0} end={amountOfStolenCars} duration={3} />
-          ) : null}
-        </div>
-        <div className='font-header text-xl tracking-[2px]'>
-          Amount of Cars <br />
-          Stolen
-        </div>
-      </div>
+  <div className='flex flex-col items-center justify-center p-20'></div>
+  <div className='flex flex-col items-end justify-center'>
+    <div className='text-[40px] font-tertiary text-white mb-2'>
+      {InView ? (
+        <CountUp start={0} end={amountOfStolenCars} duration={3} />
+      ) : null}
+    </div>
+    <div className='font-header text-xl tracking-[2px] text-center'>
+      Amount of Cars <br />
+      Stolen
+    </div>
+    <div className='text-[40px] font-tertiary text-green-600 mb-2 pt-5'>
+      {InView ? (
+        <CountUp
+          prefix='$'
+          start={0}
+          end={costOfStolenCars}
+          duration={3}
+          formattingFn={(value) => `${value >= 0 ? '+' : ''}$${(value / 1000).toFixed(1)}K`}
+          className='glowing-numbers'
+        />
+      ) : null}
+    </div>
+    <div className='font-header text-xl tracking-[2px] text-center'>
+      Total Net Worth <br /> of Cars Stolen
+    </div>
+  </div>
 
-      <div className='flex gap-x-6 sm:gap-x-10 m-40'>
-      <div className='text-[40px] font-tertiary text-green-600 mb-2'>
-  {InView ? (
-    <CountUp
-      prefix='$'
-      start={0}
-      end={costOfStolenCars}
-      duration={3}
-      formattingFn={(value) => `$${(value / 1000).toFixed(1)}K`}
-      className='glowing-numbers' // Add a class name for styling
-    />
-  ) : null}
-</div>
-        <div className='font-header text-xl tracking-[2px]'>
-          Total Net Worth of <br />
-          Cars Stolen
-        </div>
-      </div>
+  <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+    {myCars.map((car) => (
+      <CarCard
+        key={car.id}
+        totalCarsStolen={amountOfStolenCars}
+        netWorth={costOfStolenCars}
+        {...car}
+      />
+    ))}
+  </div>
+</Container>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-        {myCars.map((car) => (
-          <CarCard {...car} key={car.id} />
-        ))}
-      </div>
-    </Container>
   )
 }
 
