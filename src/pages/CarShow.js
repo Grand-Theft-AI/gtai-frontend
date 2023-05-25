@@ -14,19 +14,6 @@ const CarShow = ({ cars, current_user, updateCar }) => {
   const { id } = useParams()
   const navigate = useNavigate()
   let selectedCar = cars?.find((car) => car.id === +id)
-  const {
-    make,
-    model,
-    year,
-    mileage,
-    image,
-    description,
-    price,
-    street,
-    city,
-    state,
-    zip,
-  } = selectedCar || {}
 
   return (
     <Container>
@@ -41,31 +28,31 @@ const CarShow = ({ cars, current_user, updateCar }) => {
         <>
           <div className='text-white bg-black/50 backdrop-blur rounded-md overflow-hidden flex flex-col my-10'>
             <img
-              src={image}
-              alt={`${year} ${make} ${model}`}
+              src={selectedCar.image}
+              alt={`${selectedCar.year} ${selectedCar.make} ${selectedCar.model}`}
               className='object-cover object-center h-full w-full max-h-[600px]'
             />
 
             <div className='p-3 lg:col-span-2'>
               <h1 className='font-header text-lg mb-5 mt-3'>
-                {year} {make} {model}
+                {selectedCar.year} {selectedCar.make} {selectedCar.model}
               </h1>
 
               <p className='flex gap-2 items-center text-sm text-red-400'>
-                <Distance /> Miles: {mileage.toLocaleString()}
+                <Distance /> Miles: {selectedCar.mileage.toLocaleString()}
               </p>
               <p className='flex gap-2 items-center text-sm text-green-400'>
                 <BankNotes /> Price:{' '}
-                {price.toLocaleString(undefined, {
+                {selectedCar.price.toLocaleString(undefined, {
                   minimumFractionDigits: 2,
                 })}
               </p>
               {current_user && (
                 <p className='flex gap-2 items-center text-sm text-purple-400'>
-                  <MapPin /> {street} {city} {state} {zip}
+                  <MapPin /> {selectedCar.street} {selectedCar.city} {selectedCar.state} {selectedCar.zip}
                 </p>
               )}
-              <p className='text-sm'>{description}</p>
+              <p className='text-sm'>{selectedCar.description}</p>
               {current_user && (
                 <div className='grid grid-cols-1 sm:grid-cols-2 gap-2'>
                   <Button
@@ -78,18 +65,18 @@ const CarShow = ({ cars, current_user, updateCar }) => {
                     color='danger'
                     onClick={() => {
                       updateCar({
-                        id,
-                        make,
-                        model,
-                        year,
-                        mileage,
-                        image,
-                        price,
-                        description,
-                        street,
-                        city,
-                        state,
-                        zip,
+                        id: selectedCar?.id,
+                        make: selectedCar?.make,
+                        model: selectedCar?.model,
+                        year: selectedCar?.year,
+                        mileage: selectedCar?.mileage,
+                        image: selectedCar?.image,
+                        price: selectedCar?.price,
+                        description: selectedCar?.description,
+                        street: selectedCar?.street,
+                        city: selectedCar?.city,
+                        state: selectedCar?.state,
+                        zip: selectedCar?.zip,
                         user_id: current_user.id,
                       })
                       navigate('/mycars')
