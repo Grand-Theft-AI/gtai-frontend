@@ -8,7 +8,7 @@ const CarIndex = ({ cars }) => {
   const [parent] = useAutoAnimate()
   const [closeButton] = useAutoAnimate()
 
-  const filteredCars = cars.filter(({ make, model, year }) =>
+  const filteredCars = cars?.filter(({ make, model, year }) =>
     `${make} ${model} ${year}`.toLowerCase().includes(query.toLowerCase())
   )
 
@@ -39,14 +39,14 @@ const CarIndex = ({ cars }) => {
         className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10'
         ref={parent}
       >
-        {filteredCars.length === 0 ? (
+        {filteredCars?.length === 0 ? (
           <>
             <div className='bg-black/50 pt-10 pb-9 rounded-md backdrop-blur col-span-full text-center'>
               <p className='font-koll text-xl'>No Cars Found</p>
             </div>
           </>
         ) : (
-          filteredCars.map((car) => <CarCard {...car} key={car.id} />)
+          filteredCars?.map((car) => <CarCard {...car} key={car.id} />)
         )}
       </div>
     </Container>

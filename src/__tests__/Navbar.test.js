@@ -13,7 +13,7 @@ describe('<Navbar />', () => {
     const homeLink = screen.getByText(/Home/i)
     expect(homeLink).toBeInTheDocument()
 
-    const listingLink = screen.getByText(/View Listings/i)
+    const listingLink = screen.getByText(/Listings/i)
     expect(listingLink).toBeInTheDocument()
   })
 })

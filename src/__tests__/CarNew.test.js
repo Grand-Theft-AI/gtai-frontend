@@ -1,17 +1,21 @@
-import { render, screen } from '@testing-library/react'
-import CarNew from '../pages/CarNew'
+import { render, screen } from "@testing-library/react";
+import CarNew from "../pages/CarNew";
+import { BrowserRouter } from "react-router-dom";
 
-describe('<CarNew />', () => {
-  it('renders without crashing', () => {
-    render(<CarNew />)
+describe("<CarNew />", () => {
+  it("renders without crashing", () => {
+    render(
+      <BrowserRouter>
+        <CarNew />
+      </BrowserRouter>,
+    );
 
-    screen.logTestingPlaygroundURL()
+    screen.logTestingPlaygroundURL();
 
     const inputs = [
       {
-        type: 'textbox',
+        type: "textbox",
         names: [
-          /make/i,
           /model/i,
           /image/i,
           /description/i,
@@ -21,22 +25,22 @@ describe('<CarNew />', () => {
         ],
       },
       {
-        type: 'spinbutton',
+        type: "spinbutton",
         names: [/year/i, /mileage/i, /price/i],
       },
       {
-        type: 'combobox',
-        names: [/state/i],
+        type: "combobox",
+        names: [/state/i, /make/i],
       },
-    ]
+    ];
 
     inputs.forEach(({ type, names }) => {
       names.forEach((name) => {
         const input = screen.getByRole(type, {
           name,
-        })
-        expect(input).toBeInTheDocument()
-      })
-    })
-  })
-})
+        });
+        expect(input).toBeInTheDocument();
+      });
+    });
+  });
+});

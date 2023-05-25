@@ -1,10 +1,9 @@
-import { useParams, NavLink, Link, useNavigate } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import {
   Container,
   Distance,
   BankNotes,
   MapPin,
-  Cal,
   Button,
   Left,
   Close,
@@ -27,7 +26,7 @@ const CarShow = ({ cars, current_user, updateCar }) => {
     city,
     state,
     zip,
-  } = selectedCar
+  } = selectedCar || {}
 
   return (
     <Container>
