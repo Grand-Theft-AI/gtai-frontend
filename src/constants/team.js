@@ -25,7 +25,7 @@ export const team = [
   {
     name: 'Greg Ostertag',
     title: 'Project Manager',
-    quote: 'Please hire me!',
+    quote: 'Do or do not, there is no try',
     description:
       'Greg likes working on backend development, his dream job in tech is to work on military weapon systems.',
     image:
